@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\Users\esieben\Downloads\tutorial2_restored\Tutorial2\soc_system.qsys --block-symbol-file --output-directory=C:\Users\esieben\Downloads\tutorial2_restored\Tutorial2\soc_system --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Tutorial2\soc_system.qsys --block-symbol-file --output-directory=C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Tutorial2\soc_system --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Tutorial2/soc_system.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 17.0]
@@ -22,7 +22,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Users\esieben\Downloads\tutorial2_restored\Tutorial2\soc_system.qsys --synthesis=VHDL --output-directory=C:\Users\esieben\Downloads\tutorial2_restored\Tutorial2\soc_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Tutorial2\soc_system.qsys --synthesis=VHDL --output-directory=C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Tutorial2\soc_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Tutorial2/soc_system.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 17.0]
@@ -61,15 +61,15 @@ Info: sysid_qsys_0_control_slave_agent_rsp_fifo: "mm_interconnect_0" instantiate
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: hps_0_h2f_lw_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_lw_axi_master_wr_limiter"
-Info: Reusing file C:/Users/esieben/Downloads/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/jessicaa/Documents/Capstone/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: sysid_qsys_0_control_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sysid_qsys_0_control_slave_burst_adapter"
-Info: Reusing file C:/Users/esieben/Downloads/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/Users/esieben/Downloads/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/jessicaa/Documents/Capstone/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/jessicaa/Documents/Capstone/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/esieben/Downloads/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/jessicaa/Documents/Capstone/tutorial2_restored/Tutorial2/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"

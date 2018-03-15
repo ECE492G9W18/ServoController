@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.arm.debugger.launcher2">
 <mapAttribute key="AverageDurationTracker">
-<mapEntry key="*Fetching Data Model" value="360422"/>
-<mapEntry key="*list global low level symbols" value="1307236"/>
+<mapEntry key="*Fetching Data" value="289841372"/>
+<mapEntry key="*Fetching Data Model" value="208891"/>
+<mapEntry key="*list global low level symbols" value="423200"/>
 <mapEntry key="*loading memory from target" value="29442570"/>
-<mapEntry key="*updating local_variables" value="1042271"/>
-<mapEntry key="*updating variables" value="2689076"/>
-<mapEntry key="AddEventObserver" value="3206800"/>
-<mapEntry key="Evaluate" value="901284"/>
-<mapEntry key="Retrieving globals list" value="3099959"/>
-<mapEntry key="areCachesAvailable" value="479402"/>
-<mapEntry key="backtrace" value="22562803"/>
-<mapEntry key="break" value="8109290"/>
-<mapEntry key="continue" value="41588164"/>
-<mapEntry key="disassemble" value="53212402"/>
+<mapEntry key="*loading values from target" value="16719879"/>
+<mapEntry key="*updating local_variables" value="1028472"/>
+<mapEntry key="*updating variables" value="3367689"/>
+<mapEntry key="AddEventObserver" value="1400039"/>
+<mapEntry key="Evaluate" value="5801894"/>
+<mapEntry key="Retrieving globals list" value="15121713"/>
+<mapEntry key="areCachesAvailable" value="484517"/>
+<mapEntry key="backtrace" value="13104028"/>
+<mapEntry key="break" value="20781313"/>
+<mapEntry key="continue" value="142742532"/>
+<mapEntry key="core" value="5003866"/>
+<mapEntry key="disassemble" value="14153607"/>
+<mapEntry key="evaluate address" value="6044115"/>
 <mapEntry key="get byte order" value="1973073"/>
-<mapEntry key="get capabilities" value="127531"/>
-<mapEntry key="get execution addresss" value="509166"/>
-<mapEntry key="get source lines" value="501402"/>
-<mapEntry key="getValidEncodings" value="407981"/>
-<mapEntry key="initialize command help" value="21860759"/>
+<mapEntry key="get capabilities" value="159503"/>
+<mapEntry key="get cwd" value="288207"/>
+<mapEntry key="get execution addresss" value="472946"/>
+<mapEntry key="get source lines" value="473443"/>
+<mapEntry key="getValidEncodings" value="344424"/>
+<mapEntry key="initialize command help" value="24807654"/>
 <mapEntry key="interrupt" value="37646207"/>
-<mapEntry key="list breakpoints" value="273725"/>
-<mapEntry key="list instruction sets" value="134040"/>
-<mapEntry key="list signals" value="29986968"/>
-<mapEntry key="list watchpoints" value="300505"/>
-<mapEntry key="loadfile" value="401767475"/>
+<mapEntry key="list breakpoints" value="394106"/>
+<mapEntry key="list instruction sets" value="233507"/>
+<mapEntry key="list signals" value="54235843"/>
+<mapEntry key="list watchpoints" value="384488"/>
+<mapEntry key="loadfile" value="476450766"/>
 <mapEntry key="next" value="882208337"/>
-<mapEntry key="remove" value="28921021"/>
-<mapEntry key="set CWD" value="729863"/>
-<mapEntry key="set breakpoint properties" value="15772388"/>
-<mapEntry key="set debug-from" value="621297"/>
-<mapEntry key="source altera_target_check.py" value="352441831"/>
-<mapEntry key="source preloader.ds" value="2020991598"/>
-<mapEntry key="start" value="52936770"/>
+<mapEntry key="remove" value="15198161"/>
+<mapEntry key="run" value="628941813"/>
+<mapEntry key="set CWD" value="794144"/>
+<mapEntry key="set breakpoint properties" value="34786209"/>
+<mapEntry key="set debug-from" value="784288"/>
+<mapEntry key="source altera_target_check.py" value="241014710"/>
+<mapEntry key="source preloader.ds" value="2554709090"/>
+<mapEntry key="start" value="68756249"/>
 <mapEntry key="step" value="85295841"/>
-<mapEntry key="toggleBreakpoint" value="33108844"/>
-<mapEntry key="waitForTargetToStop" value="344027737"/>
+<mapEntry key="toggleBreakpoint" value="29827740"/>
+<mapEntry key="updateBreakpointLocation" value="1123743"/>
+<mapEntry key="waitForTargetToStop" value="472432824"/>
 </mapAttribute>
 <intAttribute key="DEBUG_TAB..RESOURCES.COUNT" value="0"/>
 <intAttribute key="FILES.CONNECT_TO_GDB_SERVER.RESOURCES.COUNT" value="0"/>
@@ -46,9 +53,9 @@
 <stringAttribute key="FILES.DEBUG_RESIDENT_ANDROID.RESOURCES.0.VALUE" value=""/>
 <intAttribute key="FILES.DEBUG_RESIDENT_ANDROID.RESOURCES.COUNT" value="1"/>
 <listAttribute key="FILES.DEBUG_RESIDENT_APP"/>
-<stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.0.TYPE" value="APPLICATION_ON_TARGET"/>
+<stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.0.TYPE" value="TARGET_WORKING_DIR"/>
 <stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.0.VALUE" value=""/>
-<stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.1.TYPE" value="TARGET_WORKING_DIR"/>
+<stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.1.TYPE" value="APPLICATION_ON_TARGET"/>
 <stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.1.VALUE" value=""/>
 <intAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.COUNT" value="2"/>
 <listAttribute key="FILES.DOWNLOAD_AND_DEBUG"/>
@@ -58,9 +65,9 @@
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.VALUE" value=""/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
-<stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.TYPE" value="TARGET_DOWNLOAD_DIR"/>
+<stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.TYPE" value="TARGET_WORKING_DIR"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.VALUE" value=""/>
-<stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.TYPE" value="TARGET_WORKING_DIR"/>
+<stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.TYPE" value="TARGET_DOWNLOAD_DIR"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.VALUE" value=""/>
 <intAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.COUNT" value="3"/>
 <listAttribute key="FILES.DOWNLOAD_DEBUG"/>
@@ -70,9 +77,9 @@
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.VALUE" value=""/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
-<stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.TYPE" value="TARGET_DOWNLOAD_DIR"/>
+<stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.TYPE" value="TARGET_WORKING_DIR"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.VALUE" value=""/>
-<stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.TYPE" value="TARGET_WORKING_DIR"/>
+<stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.TYPE" value="TARGET_DOWNLOAD_DIR"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.VALUE" value=""/>
 <intAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.COUNT" value="3"/>
 <intAttribute key="FILES.DOWNLOAD_DEBUG_ANDROID.RESOURCES.COUNT" value="0"/>
@@ -83,7 +90,7 @@
 <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
 <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
 <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
-<stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.VALUE" value="${workspace_loc:/uC_Template_Project/Debug/uC_Template_Project.axf}"/>
+<stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.VALUE" value="C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software\uC_Template_Project\Debug\uC_Template_Project.axf"/>
 <intAttribute key="FILES.ICE_DEBUG.RESOURCES.COUNT" value="1"/>
 <listAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE">
 <listEntry value="ON_DEMAND_LOAD"/>
@@ -114,7 +121,7 @@
 <booleanAttribute key="VFS_ENABLED" value="true"/>
 <stringAttribute key="VFS_LOCAL_DIR" value="${workspace_loc}"/>
 <stringAttribute key="VFS_REMOTE_MOUNT" value="/writeable"/>
-<stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
+<stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints&gt;&#10;&#9;&lt;breakpoint ignorecount=&quot;0&quot; threadenabled=&quot;no&quot; list_all_threads=&quot;no&quot; core_list=&quot;{}&quot; continue=&quot;no&quot; verboseBreakpoints=&quot;yes&quot; kind=&quot;SOURCEPOSITION&quot;&gt;&#10;&#9;&#9;&lt;master_location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; debugFile=&quot;C:/Users/jessicaa/Documents/Capstone/tutorial2_restored/Software/uC_Template_Project/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software\uC_Template_Project\APP\app.c&quot; line=&quot;214&quot;/&gt;&#10;&#9;&#9;&lt;location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; address=&quot;S:0x01006C38&quot; debugFile=&quot;C:/Users/esieben/Downloads/tutorial2_restored/Software/uC_Template_Project/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software\uC_Template_Project\APP\app.c&quot; line=&quot;214&quot;/&gt;&#10;&#9;&lt;/breakpoint&gt;&#10;&#9;&lt;breakpoint ignorecount=&quot;0&quot; threadenabled=&quot;no&quot; list_all_threads=&quot;no&quot; core_list=&quot;{}&quot; continue=&quot;no&quot; verboseBreakpoints=&quot;yes&quot; kind=&quot;SOURCEPOSITION&quot;&gt;&#10;&#9;&#9;&lt;master_location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; address=&quot;S:0x01006C40&quot; debugFile=&quot;C:/Users/esieben/Downloads/tutorial2_restored/Software/uC_Template_Project/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software\uC_Template_Project\APP\app.c&quot; line=&quot;216&quot; function=&quot;task1&quot;/&gt;&#10;&#9;&#9;&lt;location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; address=&quot;S:0x01006C40&quot; debugFile=&quot;C:/Users/esieben/Downloads/tutorial2_restored/Software/uC_Template_Project/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software\uC_Template_Project\APP\app.c&quot; line=&quot;216&quot; function=&quot;task1&quot;/&gt;&#10;&#9;&lt;/breakpoint&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
 <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.DisassemblyView.addresses">
 <listEntry value="&lt;Next Instruction&gt;"/>
 </listAttribute>
@@ -139,7 +146,7 @@
 <stringAttribute key="config_file" value="CDB://Altera_DEV5XS1.rvc"/>
 <booleanAttribute key="connectOnly" value="false"/>
 <stringAttribute key="connection_type" value="USB-Blaster"/>
-<stringAttribute key="debugger.view.DataView.os:DataView" value="rO0ABXNyACtjb20uYXJtLmRlYnVnLnZpZXdzLmRhdGEuRGF0YVZpZXdQcm9wZXJ0aWVzAAAAAAAAAAECAAB4cgAlY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLlByb3BlcnR5VHJlZQAAAAAAAAABAwABTAAFbURhdGF0ABNMamF2YS91dGlsL0hhc2hNYXA7eHB3BAAAAAJ0ABJkYXRhYmFzZVByb3BlcnRpZXNzcQB+AAF3BAAAAAF0AAZ1Y29zaWlzcgArY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLkRhdGFiYXNlUHJvcGVydGllcwAAAAAAAAABAgAAeHEAfgABdwQAAAABdAACaWRxAH4ABnh4dAAPY3VycmVudERhdGFiYXNldAAGdWNvc2lpeA=="/>
+<stringAttribute key="debugger.view.DataView.os:DataView" value="rO0ABXNyACtjb20uYXJtLmRlYnVnLnZpZXdzLmRhdGEuRGF0YVZpZXdQcm9wZXJ0aWVzAAAAAAAAAAECAAB4cgAlY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLlByb3BlcnR5VHJlZQAAAAAAAAABAwABTAAFbURhdGF0ABNMamF2YS91dGlsL0hhc2hNYXA7eHB3BAAAAAJ0ABJkYXRhYmFzZVByb3BlcnRpZXNzcQB+AAF3BAAAAAF0AAZ1Y29zaWlzcgArY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLkRhdGFiYXNlUHJvcGVydGllcwAAAAAAAAABAgAAeHEAfgABdwQAAAADdAAGdGFibGVzc3EAfgABdwQAAAACdAAGa2VybmVsc3IAKGNvbS5hcm0uZGVidWcudmlld3MuZGF0YS5UYWJsZVByb3BlcnRpZXMAAAAAAAAAAQIAAHhxAH4AAXcEAAAABHQAAmlkcQB+AAt0ABBjb2x1bW5BdXRvUmVzaXplc3EAfgABdwQAAAAEdAABMHQABHRydWV0AAExcQB+ABJ0AAEycQB+ABJ0AAItMXEAfgASeHQADGNvbHVtbldpZHRoc3NxAH4AAXcEAAAABHQAATB0AAI3NXQAATF0AAI1MHQAATJ0AAI4MHQAAi0xdAACMjR4dAAGY29uZmlndABuT3V0bGluZUNvbmZpZzEJNAktMQlmYWxzZQl0cnVlCTI0CS0xCXRydWUJMAl0cnVlCXRydWUJNzUJLTEJdHJ1ZQkxCXRydWUJdHJ1ZQk1MAktMQl0cnVlCTIJdHJ1ZQl0cnVlCTgwCS0xCXRydWV4dAAFdGFza3NzcQB+AAx3BAAAAAR0AAJpZHEAfgAidAAQY29sdW1uQXV0b1Jlc2l6ZXNxAH4AAXcEAAAAH3QAAjIydAAEdHJ1ZXQAAjIzcQB+ACh0AAIyNHEAfgAodAACMjVxAH4AKHQAAjI2cQB+ACh0AAIyN3EAfgAodAACMjhxAH4AKHQAAjI5cQB+ACh0AAIxMHEAfgAodAACMTFxAH4AKHQAAjEycQB+ACh0AAIxM3EAfgAodAACMTRxAH4AKHQAAi0xcQB+ACh0AAIxNXEAfgAodAACMTZxAH4AKHQAAjE3cQB+ACh0AAIxOHEAfgAodAACMTlxAH4AKHQAATBxAH4AKHQAATFxAH4AKHQAATJxAH4AKHQAATNxAH4AKHQAATRxAH4AKHQAATVxAH4AKHQAATZxAH4AKHQAATdxAH4AKHQAAThxAH4AKHQAATlxAH4AKHQAAjIwcQB+ACh0AAIyMXEAfgAoeHQADGNvbHVtbldpZHRoc3NxAH4AAXcEAAAAH3QAAjIydAACNjd0AAIyM3QAAjU1dAACMjR0AAI4NHQAAjI1dAACNTd0AAIyNnQAAjQ5dAACMjd0AAI4OXQAAjI4dAACODh0AAIyOXQAAjQwdAACMTB0AAI4OHQAAjExdAACOTh0AAIxMnQAAjYwdAACMTN0AAI4NXQAAjE0dAACOTF0AAItMXQAAjI0dAACMTV0AAI5MXQAAjE2dAACODV0AAIxN3QAAjg1dAACMTh0AAI5MHQAAjE5dAACOTB0AAEwdAACOTF0AAExdAACODZ0AAEydAACNTh0AAEzdAACNTh0AAE0dAACNTN0AAE1dAACODN0AAE2dAACNDh0AAE3dAADMTIwdAABOHQAAjY2dAABOXQAAjg1dAACMjB0AAI4MHQAAjIxdAACNTl4dAAGY29uZmlndALxT3V0bGluZUNvbmZpZzEJMzEJLTEJZmFsc2UJdHJ1ZQkyNAktMQl0cnVlCTAJdHJ1ZQl0cnVlCTkxCS0xCXRydWUJMQl0cnVlCXRydWUJODYJLTEJdHJ1ZQkyCXRydWUJdHJ1ZQk1OAktMQl0cnVlCTMJdHJ1ZQl0cnVlCTU4CS0xCXRydWUJNAl0cnVlCXRydWUJNTMJLTEJdHJ1ZQk1CXRydWUJdHJ1ZQk4MwktMQl0cnVlCTYJdHJ1ZQl0cnVlCTQ4CS0xCXRydWUJNwl0cnVlCXRydWUJMTIwCS0xCXRydWUJOAl0cnVlCXRydWUJNjYJLTEJdHJ1ZQk5CXRydWUJdHJ1ZQk4NQktMQl0cnVlCTEwCXRydWUJdHJ1ZQk4OAktMQl0cnVlCTExCXRydWUJdHJ1ZQk5OAktMQl0cnVlCTEyCXRydWUJdHJ1ZQk2MAktMQl0cnVlCTEzCXRydWUJdHJ1ZQk4NQktMQl0cnVlCTE0CXRydWUJdHJ1ZQk5MQktMQl0cnVlCTE1CXRydWUJdHJ1ZQk5MQktMQl0cnVlCTE2CXRydWUJdHJ1ZQk4NQktMQl0cnVlCTE3CXRydWUJdHJ1ZQk4NQktMQl0cnVlCTE4CXRydWUJdHJ1ZQk5MAktMQl0cnVlCTE5CXRydWUJdHJ1ZQk5MAktMQl0cnVlCTIwCXRydWUJdHJ1ZQk4MAktMQl0cnVlCTIxCXRydWUJdHJ1ZQk1OQktMQl0cnVlCTIyCXRydWUJdHJ1ZQk2NwktMQl0cnVlCTIzCXRydWUJdHJ1ZQk1NQktMQl0cnVlCTI0CXRydWUJdHJ1ZQk4NAktMQl0cnVlCTI1CXRydWUJdHJ1ZQk1NwktMQl0cnVlCTI2CXRydWUJdHJ1ZQk0OQktMQl0cnVlCTI3CXRydWUJdHJ1ZQk4OQktMQl0cnVlCTI4CXRydWUJdHJ1ZQk4OAktMQl0cnVlCTI5CXRydWUJdHJ1ZQk0MAktMQl0cnVleHh0AAJpZHEAfgAGdAAMY3VycmVudFRhYmxldAAGa2VybmVseHh0AA9jdXJyZW50RGF0YWJhc2V0AAZ1Y29zaWl4"/>
 <listAttribute key="debugger.view.DisassemblyView:current">
 <listEntry value="&lt;Next Instruction&gt;"/>
 <listEntry value="100"/>
@@ -165,8 +172,9 @@
 <stringAttribute key="os_extension_id" value="com.arm.debug.os.ucosii"/>
 <stringAttribute key="rddi_type" value="rddi-debug-rvi"/>
 <booleanAttribute key="runAfterConnect" value="false"/>
-<stringAttribute key="runTargetInitializationScript" value="C:\Users\esieben\Downloads\eclass_preloader\eclass_preloader\preloader.ds"/>
+<stringAttribute key="runTargetInitializationScript" value="C:\Users\jessicaa\Documents\ECE_492\eclass_preloader\eclass_preloader\preloader.ds"/>
 <stringAttribute key="rvi_address" value="DE-SoC on localhost [USB-1]:DE-SoC USB-1"/>
+<listAttribute key="scripts_view_expanded_nodes"/>
 <listAttribute key="setup">
 <listEntry value="CDB://../../../Scripts/altera_debug_server.py"/>
 <listEntry value="CDB://rddi-dap_cfg-altera.txt rddi-dap_altera"/>

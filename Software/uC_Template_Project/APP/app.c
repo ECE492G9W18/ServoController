@@ -71,9 +71,9 @@
 #define SERVO_PWM_0_ADDR 0x00000600
 #define SERVO_PWM_0_BASE FPGA_TO_HPS_LW_ADDR(SERVO_PWM_0_ADDR)
 
-#define APP_TASK1_PRIO 5
-#define APP_TASKS_PRIO 6
-#define TASK_STACK_SIZE 4096
+#define APP_TASK1_PRIO 1
+#define APP_TASKS_PRIO 2
+#define TASK_STACK_SIZE 2048
 
 /*
 *********************************************************************************************************
@@ -211,19 +211,19 @@ static void task1(void *pdata)
   while (1)
   {
 	time = 75000;
-    printf("Hello from task1\n");
-    //IOWR_32DIRECT(SERVO_PWM_0_BASE,0,75000);
-    alt_write_word(SERVO_PWM_0_BASE, time);
+    printf("Hello from task # 1\n");
+    IOWR_32DIRECT(SERVO_PWM_0_BASE,0,75000);
+    //alt_write_word(SERVO_PWM_0_BASE, time);
     OSTimeDlyHMSM(0, 0,2, 0);
     time = 30000;
 
-    //IOWR_32DIRECT(SERVO_PWM_0_BASE,0,30000);
-    alt_write_word(SERVO_PWM_0_BASE, time);
+    IOWR_32DIRECT(SERVO_PWM_0_BASE,0,30000);
+    //alt_write_word(SERVO_PWM_0_BASE, time);
     OSTimeDlyHMSM(0, 0, 2, 0);
     time = 100000;
 
-    //IOWR_32DIRECT(SERVO_PWM_0_BASE,0,100000);
-    alt_write_word(SERVO_PWM_0_BASE, time);
+    IOWR_32DIRECT(SERVO_PWM_0_BASE,0,100000);
+    //alt_write_word(SERVO_PWM_0_BASE, time);
     OSTimeDlyHMSM(0, 0, 2, 0);
   }
 }

@@ -574,7 +574,7 @@ agreement for further details.
 		(text "reset_n" (rect 229 915 500 1840)(font "Arial" (color 0 0 0)))
 		(text "servo_pwm_0_conduit_end_export" (rect 20 931 220 1875)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 229 955 494 1920)(font "Arial" (color 0 0 0)))
-		(text " system " (rect 621 976 1290 1962)(font "Arial" ))
+		(text " soc_system " (rect 600 976 1272 1962)(font "Arial" ))
 		(line (pt 224 32)(pt 432 32)(line_width 1))
 		(line (pt 432 32)(pt 432 976)(line_width 1))
 		(line (pt 224 976)(pt 432 976)(line_width 1))

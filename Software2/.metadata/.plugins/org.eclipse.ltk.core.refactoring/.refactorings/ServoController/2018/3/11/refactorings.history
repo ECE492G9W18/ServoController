@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ServoController/APP/safe-ctype&apos; to &apos;safe-ctype.h&apos;" description="Rename resource &apos;safe-ctype&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="APP/safe-ctype" name="safe-ctype.h" stamp="1521068525520" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ServoController/APP/lbiberty.h&apos; to &apos;libiberty.h&apos;" description="Rename resource &apos;lbiberty.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="APP/lbiberty.h" name="libiberty.h" stamp="1521069095041" updateReferences="true"/>
+</session>

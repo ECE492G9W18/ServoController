@@ -29,13 +29,13 @@ preplace inst soc_system.hps_0.wd_timer1 -pg 1
 preplace inst soc_system.hps_0.timer0 -pg 1
 preplace inst soc_system.hps_0.eosc1 -pg 1
 preplace inst soc_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst soc_system.servo_PWM_0 -pg 1 -lvl 3 -y 120
 preplace inst soc_system.hps_0.dcan0 -pg 1
 preplace inst soc_system.hps_0.spim0 -pg 1
 preplace inst soc_system.hps_0.timer1 -pg 1
 preplace inst soc_system.hps_0.L2 -pg 1
 preplace inst soc_system.hps_0.eosc2 -pg 1
 preplace inst soc_system.hps_0.hps_io.border -pg 1
-preplace inst soc_system.red_leds -pg 1 -lvl 3 -y 120
 preplace inst soc_system.hps_0.scu -pg 1
 preplace inst soc_system.hps_0.dcan1 -pg 1
 preplace inst soc_system.hps_0.sdmmc -pg 1
@@ -55,13 +55,13 @@ preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 160
 preplace inst soc_system.hps_0.f2s_periph_ref_clk -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.hps_0.axi_sdram -pg 1
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.memory,(SLAVE)hps_0.memory) 1 0 2 NJ 100 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)red_leds.s1,(SLAVE)sysid_qsys_0.control_slave) 1 2 1 720
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.memory,(SLAVE)soc_system.memory) 1 0 2 NJ 100 NJ
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)servo_PWM_0.reset,(MASTER)clk_0.clk_reset) 1 1 2 NJ 190 720
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)sysid_qsys_0.control_slave,(SLAVE)servo_PWM_0.s0,(MASTER)hps_0.h2f_lw_axi_master) 1 2 1 740
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_io,(SLAVE)hps_0.hps_io) 1 0 2 NJ 60 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)sysid_qsys_0.reset,(SLAVE)red_leds.reset,(MASTER)hps_0.h2f_reset,(MASTER)clk_0.clk_reset) 1 1 2 NJ 190 700
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hps_0.h2f_lw_axi_clock,(MASTER)clk_0.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)red_leds.clk) 1 1 2 390 170 740
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.red_leds_external_connection,(SLAVE)red_leds.external_connection) 1 0 3 NJ 150 NJ 150 NJ
-levelinfo -pg 1 0 180 930
-levelinfo -hier soc_system 190 220 510 770 920
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.servo_pwm_0_conduit_end_export,(SLAVE)servo_PWM_0.conduit_end) 1 0 3 NJ 150 NJ 150 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)soc_system.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)clk_0.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)servo_PWM_0.clock) 1 1 2 410 170 760
+levelinfo -pg 1 0 200 920
+levelinfo -hier soc_system 210 240 530 790 910
