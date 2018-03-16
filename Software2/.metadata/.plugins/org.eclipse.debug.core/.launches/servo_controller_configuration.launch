@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.arm.debugger.launcher2">
 <mapAttribute key="AverageDurationTracker">
-<mapEntry key="*Fetching Data Model" value="110101"/>
-<mapEntry key="*list global low level symbols" value="389043"/>
+<mapEntry key="*Fetching Data" value="746733"/>
+<mapEntry key="*Fetching Data Model" value="225171"/>
+<mapEntry key="*list global low level symbols" value="633424"/>
 <mapEntry key="*loading values from target" value="2324612"/>
 <mapEntry key="*updating variables" value="842691"/>
-<mapEntry key="AddEventObserver" value="509411"/>
+<mapEntry key="AddEventObserver" value="4103620"/>
 <mapEntry key="Evaluate" value="1074541"/>
 <mapEntry key="Retrieving globals list" value="3666473"/>
-<mapEntry key="areCachesAvailable" value="421147"/>
-<mapEntry key="break" value="8751770"/>
-<mapEntry key="continue" value="34826440"/>
+<mapEntry key="areCachesAvailable" value="414366"/>
+<mapEntry key="break" value="7116785"/>
+<mapEntry key="continue" value="227481333"/>
 <mapEntry key="disassemble" value="55336140"/>
 <mapEntry key="evaluate address" value="1780917"/>
-<mapEntry key="get capabilities" value="141019"/>
-<mapEntry key="get execution addresss" value="383373"/>
-<mapEntry key="get source lines" value="435531"/>
-<mapEntry key="getValidEncodings" value="375753"/>
-<mapEntry key="initialize command help" value="18832688"/>
-<mapEntry key="list breakpoints" value="188356"/>
-<mapEntry key="list instruction sets" value="85210"/>
-<mapEntry key="list signals" value="34411862"/>
-<mapEntry key="list watchpoints" value="206748"/>
-<mapEntry key="loadfile" value="513360779"/>
-<mapEntry key="reload-symbol-file" value="17274755"/>
-<mapEntry key="remove" value="17423870"/>
-<mapEntry key="set CWD" value="444335"/>
-<mapEntry key="set breakpoint properties" value="13448183"/>
-<mapEntry key="set debug-from" value="744035"/>
-<mapEntry key="source altera_target_check.py" value="255942158"/>
-<mapEntry key="source preloader.ds" value="2351566987"/>
-<mapEntry key="start" value="51253419"/>
-<mapEntry key="toggleBreakpoint" value="27927034"/>
-<mapEntry key="waitForTargetToStop" value="405591811"/>
+<mapEntry key="get capabilities" value="215676"/>
+<mapEntry key="get execution addresss" value="469543"/>
+<mapEntry key="get source lines" value="424827"/>
+<mapEntry key="getValidEncodings" value="348728"/>
+<mapEntry key="initialize command help" value="25047168"/>
+<mapEntry key="list breakpoints" value="272876"/>
+<mapEntry key="list instruction sets" value="201995"/>
+<mapEntry key="list signals" value="42658096"/>
+<mapEntry key="list watchpoints" value="450878"/>
+<mapEntry key="loadfile" value="335514555"/>
+<mapEntry key="reload-symbol-file" value="17507873"/>
+<mapEntry key="remove" value="8748055"/>
+<mapEntry key="set CWD" value="826198"/>
+<mapEntry key="set breakpoint properties" value="8728939"/>
+<mapEntry key="set debug-from" value="812438"/>
+<mapEntry key="source altera_target_check.py" value="223010853"/>
+<mapEntry key="source preloader.ds" value="2026798359"/>
+<mapEntry key="start" value="33852874"/>
+<mapEntry key="toggleBreakpoint" value="18261367"/>
+<mapEntry key="waitForTargetToStop" value="474506058"/>
 </mapAttribute>
 <intAttribute key="DEBUG_TAB..RESOURCES.COUNT" value="0"/>
 <intAttribute key="FILES.CONNECT_TO_GDB_SERVER.RESOURCES.COUNT" value="0"/>
@@ -56,6 +57,8 @@
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.VALUE" value=""/>
+<stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+<stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.OPTION.ON_DEMAND_LOAD" value="true"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.TYPE" value="TARGET_DOWNLOAD_DIR"/>
 <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.VALUE" value=""/>
 <intAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.COUNT" value="3"/>
@@ -68,6 +71,8 @@
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.VALUE" value=""/>
+<stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+<stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.OPTION.ON_DEMAND_LOAD" value="true"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.TYPE" value="TARGET_DOWNLOAD_DIR"/>
 <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.VALUE" value=""/>
 <intAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.COUNT" value="3"/>
@@ -133,7 +138,7 @@
 <stringAttribute key="config_file" value="CDB://Altera_DEV5XS1.rvc"/>
 <booleanAttribute key="connectOnly" value="false"/>
 <stringAttribute key="connection_type" value="USB-Blaster"/>
-<stringAttribute key="debugger.view.DataView.os:DataView" value="rO0ABXNyACtjb20uYXJtLmRlYnVnLnZpZXdzLmRhdGEuRGF0YVZpZXdQcm9wZXJ0aWVzAAAAAAAAAAECAAB4cgAlY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLlByb3BlcnR5VHJlZQAAAAAAAAABAwABTAAFbURhdGF0ABNMamF2YS91dGlsL0hhc2hNYXA7eHB3BAAAAAJ0ABJkYXRhYmFzZVByb3BlcnRpZXNzcQB+AAF3BAAAAAF0AAZ1Y29zaWlzcgArY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLkRhdGFiYXNlUHJvcGVydGllcwAAAAAAAAABAgAAeHEAfgABdwQAAAABdAACaWRxAH4ABnh4dAAPY3VycmVudERhdGFiYXNldAAGdWNvc2lpeA=="/>
+<stringAttribute key="debugger.view.DataView.os:DataView" value="rO0ABXNyACtjb20uYXJtLmRlYnVnLnZpZXdzLmRhdGEuRGF0YVZpZXdQcm9wZXJ0aWVzAAAAAAAAAAECAAB4cgAlY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLlByb3BlcnR5VHJlZQAAAAAAAAABAwABTAAFbURhdGF0ABNMamF2YS91dGlsL0hhc2hNYXA7eHB3BAAAAAJ0ABJkYXRhYmFzZVByb3BlcnRpZXNzcQB+AAF3BAAAAAF0AAZ1Y29zaWlzcgArY29tLmFybS5kZWJ1Zy52aWV3cy5kYXRhLkRhdGFiYXNlUHJvcGVydGllcwAAAAAAAAABAgAAeHEAfgABdwQAAAADdAAGdGFibGVzc3EAfgABdwQAAAABdAAGZXZlbnRzc3IAKGNvbS5hcm0uZGVidWcudmlld3MuZGF0YS5UYWJsZVByb3BlcnRpZXMAAAAAAAAAAQIAAHhxAH4AAXcEAAAABHQAAmlkcQB+AAt0ABBjb2x1bW5BdXRvUmVzaXplc3EAfgABdwQAAAAIdAABMHQABHRydWV0AAExcQB+ABJ0AAEycQB+ABJ0AAEzcQB+ABJ0AAItMXEAfgASdAABNHEAfgASdAABNXEAfgASdAABNnEAfgASeHQADGNvbHVtbldpZHRoc3NxAH4AAXcEAAAACHQAATB0AAI3NXQAATF0AAI1M3QAATJ0AAI0N3QAATN0AAI1OXQAAi0xdAACMjR0AAE0dAACNTR0AAE1dAACNTR0AAE2dAACOTR4dAAGY29uZmlndADKT3V0bGluZUNvbmZpZzEJOAktMQlmYWxzZQl0cnVlCTI0CS0xCXRydWUJMAl0cnVlCXRydWUJNzUJLTEJdHJ1ZQkxCXRydWUJdHJ1ZQk1MwktMQl0cnVlCTIJdHJ1ZQl0cnVlCTQ3CS0xCXRydWUJMwl0cnVlCXRydWUJNTkJLTEJdHJ1ZQk0CXRydWUJdHJ1ZQk1NAktMQl0cnVlCTUJdHJ1ZQl0cnVlCTU0CS0xCXRydWUJNgl0cnVlCXRydWUJOTQJLTEJdHJ1ZXh4dAACaWRxAH4ABnQADGN1cnJlbnRUYWJsZXQABmV2ZW50c3h4dAAPY3VycmVudERhdGFiYXNldAAGdWNvc2lpeA=="/>
 <listAttribute key="debugger.view.DisassemblyView:current">
 <listEntry value="&lt;Next Instruction&gt;"/>
 <listEntry value="100"/>

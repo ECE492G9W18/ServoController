@@ -1,13 +1,13 @@
-Fitter Status : Successful - Wed Mar 14 21:32:42 2018
+Fitter Status : Successful - Fri Mar 16 14:05:31 2018
 Quartus Prime Version : 17.0.2 Build 602 07/19/2017 SJ Standard Edition
 Revision Name : tutorial2
 Top-level Entity Name : tutorial2
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 394 / 32,070 ( 1 % )
-Total registers : 775
-Total pins : 159 / 457 ( 35 % )
+Logic utilization (in ALMs) : 488 / 32,070 ( 2 % )
+Total registers : 929
+Total pins : 169 / 457 ( 37 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

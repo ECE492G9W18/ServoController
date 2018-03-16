@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Mar 14 21:31:34 2018
+Analysis & Synthesis Status : Successful - Fri Mar 16 14:04:06 2018
 Quartus Prime Version : 17.0.2 Build 602 07/19/2017 SJ Standard Edition
 Revision Name : tutorial2
 Top-level Entity Name : tutorial2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 746
-Total pins : 159
+Total registers : 892
+Total pins : 169
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

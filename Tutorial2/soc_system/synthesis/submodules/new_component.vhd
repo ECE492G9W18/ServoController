@@ -53,13 +53,13 @@ write_data: process(clk,avs_s0_read_n) is
 
 pwm: process( reset_n, clk ) is
 		-- 50 MHz with a 20 ms refresh rate means period is 1000000 clk cycles between each puls
-		variable period_count: integer := 1000000; -- How man clocks to count from falling edge of first pulse to rising edge of second pulse
-		variable pulse_count: integer:= 50000; -- This is 1.5ms pulse for neurtral position
+		variable period_count: integer := 2000; -- How man clocks to count from falling edge of first pulse to rising edge of second pulse
+		variable pulse_count: integer:= 900; -- This is 1.5ms pulse for neurtral position
 		
 	begin
 		if ( reset_n = '0' ) then
-				period_count := 1000000;
-				pulse_count := 50000;
+				period_count := 2000;
+				pulse_count := 900;
 		elsif rising_edge(clk) then
 			if ( current_state = high ) then
 				if ( pulse_count > 0 ) then
@@ -69,7 +69,7 @@ pwm: process( reset_n, clk ) is
 					current_state <= low;
 					pulse_count := to_integer(unsigned(direction));
 					if (pulse_count = 0 ) then
-						pulse_count := 50000;
+						pulse_count := 900;
 					end if;
 				end if;
 			elsif ( current_state = low ) then
@@ -77,7 +77,7 @@ pwm: process( reset_n, clk ) is
 					period_count := period_count - 1;
 					conduit_end_servo <= '0';
 				elsif ( period_count = 0 ) then
-					period_count := 1000000;
+					period_count := 2000;
 					current_state <= high;
 				end if;
 			end if;

@@ -44,6 +44,7 @@
 
 #include  <app_cfg.h>
 #include  <lib_mem.h>
+#include <inttypes.h>
 
 #include  <bsp.h>
 #include  <bsp_int.h>
@@ -59,6 +60,7 @@
 #include  <hwlib.h>
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "io.h"
 
 
@@ -68,12 +70,19 @@
 // base should be ranged checked from 0x0 - 0x1fffff
 
 #define FPGA_TO_HPS_LW_ADDR(base)  ((void *) (((char *)  (ALT_LWFPGASLVS_ADDR))+ (base)))
-#define SERVO_PWM_0_ADDR 0x00000600
-#define SERVO_PWM_0_BASE FPGA_TO_HPS_LW_ADDR(SERVO_PWM_0_ADDR)
 
-#define APP_TASK1_PRIO 5
-#define APP_TASKS_PRIO 6
+#define SERVO_PWM_0_ADDR 	0x00000600
+#define SWITCH_ADD 			0x00000300
+
+#define SERVO_PWM_0_BASE FPGA_TO_HPS_LW_ADDR(SERVO_PWM_0_ADDR)
+#define SWITCH_BASE FPGA_TO_HPS_LW_ADDR(SWITCH_ADD)
+
+#define APP_TASK1_PRIO 6
+#define APP_TASKS_PRIO 7
+#define SW_CHK_PRIO 5
+
 #define TASK_STACK_SIZE 4096
+#define QSIZE 50;
 
 /*
 *********************************************************************************************************
@@ -83,7 +92,9 @@
 
 CPU_STK AppTaskStartStk[TASK_STACK_SIZE];
 CPU_STK Task1Stk[TASK_STACK_SIZE];
-CPU_STK Task2Stk[TASK_STACK_SIZE];
+CPU_STK CheckSwitchTaskStk[TASK_STACK_SIZE];
+OS_EVENT OSQ;
+void *OSQTable[50];
 
 /*
 *********************************************************************************************************
@@ -91,9 +102,9 @@ CPU_STK Task2Stk[TASK_STACK_SIZE];
 *********************************************************************************************************
 */
 
-static  void  AppTaskStart              (void        *p_arg);
-static void task1			(void *pdata);
-
+static  void  AppTaskStart (void *p_arg);
+static void ServoTask (void *pdata);
+static void SwitchTask (void *p_arg);
 
 /*
 *********************************************************************************************************
@@ -131,6 +142,7 @@ int main ()
 
     OSInit();
 
+    OSQ = *OSQCreate (OSQTable[0], 50);
 
     os_err = OSTaskCreateExt((void (*)(void *)) AppTaskStart,   /* Create the start task.                               */
                              (void          * ) 0,
@@ -146,11 +158,11 @@ int main ()
             ; /* Handle error. */
         }
 
-    os_err = OSTaskCreateExt((void (*)(void *)) task1,   /* Create the start task.                               */
+    os_err = OSTaskCreateExt((void (*)(void *)) ServoTask,
                                 (void          * ) 0,
                                 (OS_STK        * )&Task1Stk[TASK_STACK_SIZE - 1],
                                 (INT8U           ) APP_TASK1_PRIO,
-                                (INT16U          ) APP_TASK1_PRIO,  // reuse prio for ID
+                                (INT16U          ) APP_TASK1_PRIO,
                                 (OS_STK        * )&Task1Stk[0],
                                 (INT32U          ) TASK_STACK_SIZE,
                                 (void          * )0,
@@ -159,6 +171,21 @@ int main ()
     if (os_err != OS_ERR_NONE) {
             ; /* Handle error. */
         }
+
+
+//    os_err = OSTaskCreateExt((void (*)(void *)) SwitchTask,
+//                                 (void          * ) 0,
+//                                 (OS_STK        * )&CheckSwitchTaskStk[TASK_STACK_SIZE - 1],
+//                                 (INT8U           ) SW_CHK_PRIO,
+//                                 (INT16U          ) SW_CHK_PRIO,
+//                                 (OS_STK        * )&CheckSwitchTaskStk[0],
+//                                 (INT32U          ) TASK_STACK_SIZE,
+//                                 (void          * )0,
+//                                 (INT16U          )(OS_TASK_OPT_STK_CLR | OS_TASK_OPT_STK_CHK));
+//
+//	if (os_err != OS_ERR_NONE) {
+//		; /* Handle error. */
+//	}
 
     CPU_IntEn();
 
@@ -204,25 +231,90 @@ static  void  AppTaskStart (void *p_arg)
 }
 
 /* Prints "Hello World" and sleeps for three seconds */
-static void task1(void *pdata)
+static void ServoTask(void *pdata)
 {
+	OS_ERR err;
+	char* msg;
+
+	printf("servo motor task\n");
+
+	uint32_t time = 0;
+	BSP_OS_TmrTickInit(OS_TICKS_PER_SEC);
+	while (1)
+	{
+		//min
+		time = 28000;
+		printf("pulse: %" PRIu32 "\n", time);
+		alt_write_word(SERVO_PWM_0_BASE, time);
+		OSTimeDlyHMSM(0, 0, 0, 500);
+
+		//mid
+		time = 50000;
+		printf("pulse: %" PRIu32 "\n", time);
+		alt_write_word(SERVO_PWM_0_BASE, time);
+		OSTimeDlyHMSM(0, 0, 0, 500);
+
+		//max
+		time = 80000;
+		printf("pulse: %" PRIu32 "\n", time);
+		alt_write_word(SERVO_PWM_0_BASE, time);
+		OSTimeDlyHMSM(0, 0, 3, 0);
+
+	}
+}
+
+static void load_motor(uint32_t block) {
+
+	uint32_t time = 0;
+
+	switch (block) {
+	case 0:
+		time = 80000;
+		break;
+	case 1:
+		time = 50000;
+		break;
+	case 2:
+		time = 28000;
+		break;
+
+	default:
+		time = 28000;
+	}
+
+	printf("moving servo: %" PRIu32 "\n", time);
+
+	alt_write_word(SERVO_PWM_0_BASE, time);
+	OSTimeDlyHMSM(0, 0, 0, 500);
+}
+
+static void SwitchTask (void *p_arg) {
+
 	BSP_OS_TmrTickInit(OS_TICKS_PER_SEC);                       /* Configure and enable OS tick interrupt.              */
-  while (1)
-  {
-    printf("pulse: 100000\n");
-    alt_write_word(SERVO_PWM_0_BASE, 100000);
-    OSTimeDlyHMSM(0, 0, 2, 0);
 
-    printf("pulse: 0\n");
-	alt_write_word(SERVO_PWM_0_BASE, 0);
-	OSTimeDlyHMSM(0, 0, 2, 0);
+	printf("switches task\n");
+	uint32_t result;
+	uint32_t old_result = -1; // impossible value
+	uint32_t delta;
 
-    printf("pulse: 1000\n");
-    alt_write_word(SERVO_PWM_0_BASE, 1000);
-    OSTimeDlyHMSM(0, 0, 2, 0);
+	while (1) {
+        result = alt_read_word(SWITCH_BASE);
+        printf("switched: %x\n", result);
 
-    printf("pulse: 0\n");
-    alt_write_word(SERVO_PWM_0_BASE, 0);
-    OSTimeDlyHMSM(0, 0, 2, 0);
-  }
+        if (old_result == -1|| result != old_result) {
+
+        	if (result != old_result) {
+        		delta = abs(old_result - result);
+        		printf("delta %" PRIu32 "\n", delta);
+        	}
+
+        	char full_line[40];
+			sprintf(full_line, "Switch Reader\nSwitches : 0x%x\n", result);
+	        OSQPost(&OSQ, (void *) full_line);
+
+			old_result = result;
+        }
+
+        OSTimeDlyHMSM(0, 0, 0, 50);
+	}
 }

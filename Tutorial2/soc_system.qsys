@@ -46,6 +46,27 @@
          type = "String";
       }
    }
+   element switches
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element switches.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "768";
+         type = "String";
+      }
+   }
    element sysid_qsys_0
    {
       datum _sortIndex
@@ -95,6 +116,11 @@
  <interface
    name="servo_pwm_0_conduit_end_export"
    internal="servo_PWM_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="switches_external_connection"
+   internal="switches.external_connection"
    type="conduit"
    dir="end" />
  <module name="clk_0" kind="clock_source" version="17.0" enabled="1">
@@ -634,6 +660,20 @@
   <parameter name="use_default_mpu_clk" value="false" />
  </module>
  <module name="servo_PWM_0" kind="servo_PWM" version="1.0" enabled="1" />
+ <module name="switches" kind="altera_avalon_pio" version="17.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="10" />
+ </module>
  <module
    name="sysid_qsys_0"
    kind="altera_avalon_sysid_qsys"
@@ -659,7 +699,17 @@
   <parameter name="baseAddress" value="0x0600" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection
+   kind="avalon"
+   version="17.0"
+   start="hps_0.h2f_lw_axi_master"
+   end="switches.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0300" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection kind="clock" version="17.0" start="clk_0.clk" end="sysid_qsys_0.clk" />
+ <connection kind="clock" version="17.0" start="clk_0.clk" end="switches.clk" />
  <connection kind="clock" version="17.0" start="clk_0.clk" end="servo_PWM_0.clock" />
  <connection
    kind="clock"
@@ -679,6 +729,11 @@
  <connection
    kind="reset"
    version="17.0"
+   start="clk_0.clk_reset"
+   end="switches.reset" />
+ <connection
+   kind="reset"
+   version="17.0"
    start="hps_0.h2f_reset"
    end="sysid_qsys_0.reset" />
  <connection
@@ -686,6 +741,11 @@
    version="17.0"
    start="hps_0.h2f_reset"
    end="servo_PWM_0.reset" />
+ <connection
+   kind="reset"
+   version="17.0"
+   start="hps_0.h2f_reset"
+   end="switches.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

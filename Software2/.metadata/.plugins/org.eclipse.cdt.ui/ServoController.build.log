@@ -1,13 +1,32 @@
-22:02:00 **** Incremental Build of configuration Debug for project ServoController ****
+14:14:46 **** Incremental Build of configuration Debug for project ServoController ****
 make all 
 'Building file: ../APP/app.c'
 'Invoking: ARM C Compiler 5'
-armcc --cpu=Cortex-A9 --no_unaligned_access -Dsoc_cv_av -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\APP" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\BSP" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\BSP\OS" -I"C:\intelFPGA\17.0\embedded\ip\altera\hps\altera_hps\hwlib\include" -I"C:\intelFPGA\17.0\embedded\ip\altera\hps\altera_hps\hwlib\include\soc_cv_av" -I"C:\intelFPGA\17.0\embedded\ip\altera\hps\altera_hps\hwlib\include\soc_cv_av\socal" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\HWLIBS" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\uC-CPU\ARM-Cortex-A" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\uC-CPU" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\uC-LIBS" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\uCOS-II\Ports" -I"C:\Users\jessicaa\Documents\Capstone\tutorial2_restored\Software2\ServoController\uCOS-II\Source" --c99 --gnu -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="APP" -c -o "APP/app.o" "../APP/app.c"
+armcc --cpu=Cortex-A9 --no_unaligned_access -Dsoc_cv_av -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\APP" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\BSP" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\BSP\OS" -I"C:\intelFPGA\17.0\embedded\ip\altera\hps\altera_hps\hwlib\include" -I"C:\intelFPGA\17.0\embedded\ip\altera\hps\altera_hps\hwlib\include\soc_cv_av" -I"C:\intelFPGA\17.0\embedded\ip\altera\hps\altera_hps\hwlib\include\soc_cv_av\socal" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\HWLIBS" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\uC-CPU\ARM-Cortex-A" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\uC-CPU" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\uC-LIBS" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\uCOS-II\Ports" -I"C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\uCOS-II\Source" --c99 --gnu -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="APP" -c -o "APP/app.o" "../APP/app.c"
+"../APP/app.c", line 236: Warning:  #177-D: variable "err" was declared but never referenced
+  	OS_ERR err;
+  	       ^
+"../APP/app.c", line 237: Warning:  #177-D: variable "msg" was declared but never referenced
+  	char* msg;
+  	      ^
+"../APP/app.c", line 297: Warning:  #68-D: integer conversion resulted in a change of sign
+  	uint32_t old_result = -1; // impossible value
+  	                      ^
+"../APP/app.c", line 304: Warning:  #68-D: integer conversion resulted in a change of sign
+          if (old_result == -1|| result != old_result) {
+                            ^
+"../APP/app.c", line 291: Warning:  #177-D: function "SwitchTask" was declared but never referenced
+  static void SwitchTask (void *p_arg) {
+              ^
+"../APP/app.c", line 266: Warning:  #177-D: function "load_motor" was declared but never referenced
+  static void load_motor(uint32_t block) {
+              ^
+../APP/app.c: 6 warnings, 0 errors
 'Finished building: ../APP/app.c'
 ' '
 'Building target: ServoController.axf'
 'Invoking: ARM Linker 5'
-armlink --cpu=Cortex-A9 --entry=Start --scatter=""C:/Users/jessicaa/Documents/Capstone/tutorial2_restored/Software2/ServoController/BSP/ARM_COMPILER/scatter.scat"" --info=sizes -o "ServoController.axf"  ./uCOS-II/Source/os_core.o ./uCOS-II/Source/os_dbg_r.o ./uCOS-II/Source/os_flag.o ./uCOS-II/Source/os_mbox.o ./uCOS-II/Source/os_mem.o ./uCOS-II/Source/os_mutex.o ./uCOS-II/Source/os_q.o ./uCOS-II/Source/os_sem.o ./uCOS-II/Source/os_task.o ./uCOS-II/Source/os_time.o ./uCOS-II/Source/os_tmr.o  ./uCOS-II/Ports/os_cpu_a_vfp-d32.o ./uCOS-II/Ports/os_cpu_c.o  ./uC-LIBS/lib_ascii.o ./uC-LIBS/lib_math.o ./uC-LIBS/lib_mem.o ./uC-LIBS/lib_str.o  ./uC-CPU/Cache/cpu_cache_armv7_generic_l1_l2c310_l2.o ./uC-CPU/Cache/cpu_cache_armv7_generic_l1_l2c310_l2_a.o  ./uC-CPU/ARM-Cortex-A/cpu_a.o  ./uC-CPU/cpu_core.o  ./HWLIBS/alt_16550_uart.o ./HWLIBS/alt_bridge_manager.o ./HWLIBS/alt_clock_manager.o ./HWLIBS/alt_fpga_manager.o  ./BSP/OS/bsp_os.o  ./BSP/ARM_Compiler/armv7a_tthelp.o ./BSP/ARM_Compiler/bsp_cache.o ./BSP/ARM_Compiler/startup.o  ./BSP/bsp.o ./BSP/bsp_int.o ./BSP/cpu_bsp.o  ./APP/app.o   
+armlink --cpu=Cortex-A9 --entry=Start --scatter=""C:/Users/jessicaa/Documents/Capstone/backup/tutorial2_restored/Software2/ServoController/BSP/ARM_COMPILER/scatter.scat"" --info=sizes -o "ServoController.axf"  ./uCOS-II/Source/os_core.o ./uCOS-II/Source/os_dbg_r.o ./uCOS-II/Source/os_flag.o ./uCOS-II/Source/os_mbox.o ./uCOS-II/Source/os_mem.o ./uCOS-II/Source/os_mutex.o ./uCOS-II/Source/os_q.o ./uCOS-II/Source/os_sem.o ./uCOS-II/Source/os_task.o ./uCOS-II/Source/os_time.o ./uCOS-II/Source/os_tmr.o  ./uCOS-II/Ports/os_cpu_a_vfp-d32.o ./uCOS-II/Ports/os_cpu_c.o  ./uC-LIBS/lib_ascii.o ./uC-LIBS/lib_math.o ./uC-LIBS/lib_mem.o ./uC-LIBS/lib_str.o  ./uC-CPU/Cache/cpu_cache_armv7_generic_l1_l2c310_l2.o ./uC-CPU/Cache/cpu_cache_armv7_generic_l1_l2c310_l2_a.o  ./uC-CPU/ARM-Cortex-A/cpu_a.o  ./uC-CPU/cpu_core.o  ./HWLIBS/alt_16550_uart.o ./HWLIBS/alt_bridge_manager.o ./HWLIBS/alt_clock_manager.o ./HWLIBS/alt_fpga_manager.o  ./BSP/OS/bsp_os.o  ./BSP/ARM_Compiler/armv7a_tthelp.o ./BSP/ARM_Compiler/bsp_cache.o ./BSP/ARM_Compiler/startup.o  ./BSP/bsp.o ./BSP/bsp_int.o ./BSP/cpu_bsp.o  ./APP/app.o   
 
 ==============================================================================
 
@@ -16,33 +35,34 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       492         76          0          0      49152       2959   app.o
-        96          0          0          0          0        580   armv7a_tthelp.o
-       136         16          0          0          0       1729   bsp.o
-       436          0          0          0          0        916   bsp_cache.o
-       832         32          0          0       1024       5919   bsp_int.o
-       280         12          0          0          0       3050   bsp_os.o
-        96          0          0          0          0        800   cpu_a.o
-       220          4          0          0          0       1344   cpu_bsp.o
-        44         12          0          8          0        962   cpu_cache_armv7_generic_l1_l2c310_l2.o
-       204          0          0          0          0        688   cpu_cache_armv7_generic_l1_l2c310_l2_a.o
-       888         20        260          4          0       6988   cpu_core.o
-         0          0          0          0          0      13608   lib_ascii.o
-         0          0          0          0          0       1560   lib_math.o
-      5136         76          0          4   16777236      27705   lib_mem.o
-      5836        160        256         80      10920      24663   os_core.o
-       988          0          0          0          0        568   os_cpu_a_vfp-d32.o
-       608         36          0         12       4096      14865   os_cpu_c.o
-       376        184        118          0          0      12241   os_dbg_r.o
-      3768         36          0          0          0       7772   os_flag.o
-      1096         16          0          0          0       3808   os_mem.o
-      2916         28          0          0          0       6289   os_q.o
-      3992         48          0          0          0       9080   os_task.o
-       796         28          0          0          0       1990   os_time.o
-       496         76          0          0          0        796   startup.o
+         0          0          0          0          0       3128   alt_16550_uart.o
+       912        168          0          0      49376       4306   app.o
+        96          0          0          0          0        588   armv7a_tthelp.o
+       136         16          0          0          0       1749   bsp.o
+       436          0          0          0          0        924   bsp_cache.o
+       832         32          0          0       1024       5979   bsp_int.o
+       280         12          0          0          0       3082   bsp_os.o
+        96          0          0          0          0        808   cpu_a.o
+       220          4          0          0          0       1352   cpu_bsp.o
+        44         12          0          8          0        974   cpu_cache_armv7_generic_l1_l2c310_l2.o
+       204          0          0          0          0        696   cpu_cache_armv7_generic_l1_l2c310_l2_a.o
+       888         20        260          4          0       7040   cpu_core.o
+         0          0          0          0          0      13664   lib_ascii.o
+         0          0          0          0          0       1596   lib_math.o
+      5136         76          0          4   16777236      27773   lib_mem.o
+      5836        160        256         80      10920      24731   os_core.o
+       988          0          0          0          0        576   os_cpu_a_vfp-d32.o
+       608         36          0         12       4096      14921   os_cpu_c.o
+       376        184        118          0          0      12301   os_dbg_r.o
+      3768         36          0          0          0       7796   os_flag.o
+      1096         16          0          0          0       3824   os_mem.o
+      2916         28          0          0          0       6305   os_q.o
+      3992         48          0          0          0       9100   os_task.o
+       796         28          0          0          0       1998   os_time.o
+       496         76          0          0          0        804   startup.o
 
     ----------------------------------------------------------------------
-     29744        872        652        108   50441916     150880   Object Totals
+     30164        964        652        108   50442140     156015   Object Totals
          0          0         16          0   33599488          0   (incl. Generated)
         12         12          2          0          0          0   (incl. Padding)
 
@@ -51,7 +71,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
          8          0          0          0          0         68   __main.o
-        40          0          0          0          0         84   __printf_nopercent.o
+       104          0          0          0          0         84   __printf.o
          0          0          0          0          0          0   __rtentry.o
         12          0          0          0          0          0   __rtentry2.o
          8          4          0          0          0          0   __rtentry6.o
@@ -59,6 +79,14 @@ Image component sizes
         28          0          0          0          0          0   __scatter_zi.o
         48          6          0          0          0         96   _printf_char_common.o
         36          4          0          0          0         80   _printf_char_file.o
+       112         16          0          0          0         92   _printf_dec.o
+        88          4         40          0          0         88   _printf_hex_int.o
+       178          0          0          0          0         88   _printf_intcommon.o
+         0          0          0          0          0          0   _printf_percent.o
+         4          0          0          0          0          0   _printf_percent_end.o
+         6          0          0          0          0          0   _printf_u.o
+         6          0          0          0          0          0   _printf_x.o
+        10          0          0          0          0         68   _sputc.o
        416          0          0          0          0        144   aeabi_sdiv.o
         10          0          0          0          0         68   defsig_exit.o
         50          0          0          0          0         88   defsig_general.o
@@ -92,11 +120,14 @@ Image component sizes
        816         64          0          0          0         84   lludiv5.o
          0          0          0          0          0          0   maybetermalloc1.o
         24          4          0          0          0         84   noretval__2printf.o
+        40          6          0          0          0         84   noretval__2sprintf.o
          8          4          0          0          0         68   rt_errno_addr_intlibspace.o
          8          4          0          0          0         68   rt_heap_descriptor_intlibspace.o
         80          0          0          0          0        172   rt_neon_memclr_w.o
+       124          0          0          0          0        192   rt_noneon_memcpy_w_ca9.o
          2          0          0          0          0          0   rtexit.o
         10          0          0          0          0          0   rtexit2.o
+        44          0          0          0          0         68   rtudiv10.o
         70          0          0          0          0         80   setvbuf.o
        240          6          0          0          0        156   stdio.o
          0          0          0         12        252          0   stdio_streams.o
@@ -108,18 +139,18 @@ Image component sizes
         10          0          0          0          0        116   fpinit.o
 
     ----------------------------------------------------------------------
-      4284        274         12         16        348       3792   Library Totals
-        10          0          0          0          0          0   (incl. Padding)
+      4964        300         52         16        348       4472   Library Totals
+        14          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      4264        274         12         16        348       3676   c_2.l
+      4940        300         52         16        348       4356   c_2.l
         10          0          0          0          0        116   fz_2v.l
 
     ----------------------------------------------------------------------
-      4284        274         12         16        348       3792   Library Totals
+      4964        300         52         16        348       4472   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -128,20 +159,20 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     34028       1146        664        124   50442264     148648   Grand Totals
-     34028       1146        664        124   50442264     148648   ELF Image Totals
-     34028       1146        664        124          0          0   ROM Totals
+     35128       1264        704        124   50442488     154003   Grand Totals
+     35128       1264        704        124   50442488     154003   ELF Image Totals
+     35128       1264        704        124          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                34692 (  33.88kB)
-    Total RW  Size (RW Data + ZI Data)          50442388 (49260.14kB)
-    Total ROM Size (Code + RO Data + RW Data)      34816 (  34.00kB)
+    Total RO  Size (Code + RO Data)                35832 (  34.99kB)
+    Total RW  Size (RW Data + ZI Data)          50442612 (49260.36kB)
+    Total ROM Size (Code + RO Data + RW Data)      35956 (  35.11kB)
 
 ==============================================================================
 
 'Finished building target: ServoController.axf'
 ' '
 
-22:02:02 Build Finished (took 1s.518ms)
+14:14:46 Build Finished (took 765ms)
 

@@ -75,7 +75,8 @@ entity soc_system is
 		memory_mem_dm                         : out   std_logic_vector(3 downto 0);                     --                               .mem_dm
 		memory_oct_rzqin                      : in    std_logic                     := '0';             --                               .oct_rzqin
 		reset_reset_n                         : in    std_logic                     := '0';             --                          reset.reset_n
-		servo_pwm_0_conduit_end_export_export : out   std_logic                                         -- servo_pwm_0_conduit_end_export.export
+		servo_pwm_0_conduit_end_export_export : out   std_logic;                                        -- servo_pwm_0_conduit_end_export.export
+		switches_external_connection_export   : in    std_logic_vector(9 downto 0)  := (others => '0')  --   switches_external_connection.export
 	);
 end entity soc_system;
 
@@ -204,6 +205,16 @@ architecture rtl of soc_system is
 		);
 	end component new_component;
 
+	component soc_system_switches is
+		port (
+			clk      : in  std_logic                     := 'X';             -- clk
+			reset_n  : in  std_logic                     := 'X';             -- reset_n
+			address  : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			readdata : out std_logic_vector(31 downto 0);                    -- readdata
+			in_port  : in  std_logic_vector(9 downto 0)  := (others => 'X')  -- export
+		);
+	end component soc_system_switches;
+
 	component soc_system_sysid_qsys_0 is
 		port (
 			clock    : in  std_logic                     := 'X'; -- clk
@@ -258,6 +269,8 @@ architecture rtl of soc_system is
 			servo_PWM_0_s0_read                                                 : out std_logic;                                        -- read
 			servo_PWM_0_s0_readdata                                             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			servo_PWM_0_s0_writedata                                            : out std_logic_vector(31 downto 0);                    -- writedata
+			switches_s1_address                                                 : out std_logic_vector(1 downto 0);                     -- address
+			switches_s1_readdata                                                : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			sysid_qsys_0_control_slave_address                                  : out std_logic_vector(0 downto 0);                     -- address
 			sysid_qsys_0_control_slave_readdata                                 : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
 		);
@@ -437,19 +450,17 @@ architecture rtl of soc_system is
 	signal mm_interconnect_0_servo_pwm_0_s0_read                 : std_logic;                     -- mm_interconnect_0:servo_PWM_0_s0_read -> mm_interconnect_0_servo_pwm_0_s0_read:in
 	signal mm_interconnect_0_servo_pwm_0_s0_write                : std_logic;                     -- mm_interconnect_0:servo_PWM_0_s0_write -> mm_interconnect_0_servo_pwm_0_s0_write:in
 	signal mm_interconnect_0_servo_pwm_0_s0_writedata            : std_logic_vector(31 downto 0); -- mm_interconnect_0:servo_PWM_0_s0_writedata -> servo_PWM_0:avs_s0_writedata
+	signal mm_interconnect_0_switches_s1_readdata                : std_logic_vector(31 downto 0); -- switches:readdata -> mm_interconnect_0:switches_s1_readdata
+	signal mm_interconnect_0_switches_s1_address                 : std_logic_vector(1 downto 0);  -- mm_interconnect_0:switches_s1_address -> switches:address
 	signal rst_controller_reset_out_reset                        : std_logic;                     -- rst_controller:reset_out -> [mm_interconnect_0:sysid_qsys_0_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in]
 	signal hps_0_h2f_reset_reset                                 : std_logic;                     -- hps_0:h2f_rst_n -> hps_0_h2f_reset_reset:in
 	signal rst_controller_001_reset_out_reset                    : std_logic;                     -- rst_controller_001:reset_out -> mm_interconnect_0:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset
 	signal reset_reset_n_ports_inv                               : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_servo_pwm_0_s0_read_ports_inv       : std_logic;                     -- mm_interconnect_0_servo_pwm_0_s0_read:inv -> servo_PWM_0:avs_s0_read_n
 	signal mm_interconnect_0_servo_pwm_0_s0_write_ports_inv      : std_logic;                     -- mm_interconnect_0_servo_pwm_0_s0_write:inv -> servo_PWM_0:avs_s0_write_n
-	signal rst_controller_reset_out_reset_ports_inv              : std_logic;                     -- rst_controller_reset_out_reset:inv -> [servo_PWM_0:reset_n, sysid_qsys_0:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv              : std_logic;                     -- rst_controller_reset_out_reset:inv -> [servo_PWM_0:reset_n, switches:reset_n, sysid_qsys_0:reset_n]
 	signal hps_0_h2f_reset_reset_ports_inv                       : std_logic;                     -- hps_0_h2f_reset_reset:inv -> [rst_controller:reset_in1, rst_controller_001:reset_in0]
-	
-	type state is (low, high);	
-	signal current_state:state := high;
-	signal direction:std_logic_vector (31 downto 0);
-	
+
 begin
 
 	hps_0 : component soc_system_hps_0
@@ -574,6 +585,15 @@ begin
 			avs_s0_writedata  => mm_interconnect_0_servo_pwm_0_s0_writedata        --            .writedata
 		);
 
+	switches : component soc_system_switches
+		port map (
+			clk      => clk_clk,                                  --                 clk.clk
+			reset_n  => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
+			address  => mm_interconnect_0_switches_s1_address,    --                  s1.address
+			readdata => mm_interconnect_0_switches_s1_readdata,   --                    .readdata
+			in_port  => switches_external_connection_export       -- external_connection.export
+		);
+
 	sysid_qsys_0 : component soc_system_sysid_qsys_0
 		port map (
 			clock    => clk_clk,                                                 --           clk.clk
@@ -627,6 +647,8 @@ begin
 			servo_PWM_0_s0_read                                                 => mm_interconnect_0_servo_pwm_0_s0_read,                 --                                                              .read
 			servo_PWM_0_s0_readdata                                             => mm_interconnect_0_servo_pwm_0_s0_readdata,             --                                                              .readdata
 			servo_PWM_0_s0_writedata                                            => mm_interconnect_0_servo_pwm_0_s0_writedata,            --                                                              .writedata
+			switches_s1_address                                                 => mm_interconnect_0_switches_s1_address,                 --                                                   switches_s1.address
+			switches_s1_readdata                                                => mm_interconnect_0_switches_s1_readdata,                --                                                              .readdata
 			sysid_qsys_0_control_slave_address                                  => mm_interconnect_0_sysid_qsys_0_control_slave_address,  --                                    sysid_qsys_0_control_slave.address
 			sysid_qsys_0_control_slave_readdata                                 => mm_interconnect_0_sysid_qsys_0_control_slave_readdata  --                                                              .readdata
 		);
