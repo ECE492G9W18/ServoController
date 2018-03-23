@@ -68,7 +68,7 @@
 			memory_oct_rzqin                      : in    std_logic                     := 'X';             -- oct_rzqin
 			reset_reset_n                         : in    std_logic                     := 'X';             -- reset_n
 			servo_pwm_0_conduit_end_export_export : out   std_logic;                                        -- export
-			switches_external_connection_export   : in    std_logic_vector(9 downto 0)  := (others => 'X')  -- export
+			servo_pwm_1_conduit_end_export_export : out   std_logic                                         -- export
 		);
 	end component soc_system;
 
@@ -142,6 +142,6 @@
 			memory_oct_rzqin                      => CONNECTED_TO_memory_oct_rzqin,                      --                               .oct_rzqin
 			reset_reset_n                         => CONNECTED_TO_reset_reset_n,                         --                          reset.reset_n
 			servo_pwm_0_conduit_end_export_export => CONNECTED_TO_servo_pwm_0_conduit_end_export_export, -- servo_pwm_0_conduit_end_export.export
-			switches_external_connection_export   => CONNECTED_TO_switches_external_connection_export    --   switches_external_connection.export
+			servo_pwm_1_conduit_end_export_export => CONNECTED_TO_servo_pwm_1_conduit_end_export_export  -- servo_pwm_1_conduit_end_export.export
 		);
 

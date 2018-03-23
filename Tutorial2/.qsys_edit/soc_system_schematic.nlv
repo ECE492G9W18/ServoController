@@ -56,14 +56,14 @@ preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 180
 preplace inst soc_system.hps_0.f2s_periph_ref_clk -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.hps_0.axi_sdram -pg 1
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.switches_external_connection,(SLAVE)switches.external_connection) 1 0 3 NJ 270 NJ 270 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.memory,(SLAVE)hps_0.memory) 1 0 2 NJ 100 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_system.hps_io) 1 0 2 NJ 60 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)servo_PWM_0.conduit_end,(SLAVE)soc_system.servo_pwm_0_conduit_end_export) 1 0 3 NJ 170 NJ 170 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)servo_PWM_0.clock,(SLAVE)switches.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(MASTER)clk_0.clk,(SLAVE)sysid_qsys_0.clk) 1 1 2 410 190 760
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)switches.external_connection,(SLAVE)soc_system.switches_external_connection) 1 0 3 NJ 270 NJ 270 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)servo_PWM_0.clock,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)sysid_qsys_0.clk,(SLAVE)switches.clk,(MASTER)clk_0.clk) 1 1 2 410 150 760
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)switches.reset,(MASTER)hps_0.h2f_reset,(SLAVE)sysid_qsys_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)servo_PWM_0.reset) 1 1 2 N 210 720
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)sysid_qsys_0.control_slave,(SLAVE)switches.s1,(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)servo_PWM_0.s0) 1 2 1 740
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_io,(SLAVE)hps_0.hps_io) 1 0 2 NJ 60 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.servo_pwm_0_conduit_end_export,(SLAVE)servo_PWM_0.conduit_end) 1 0 3 NJ 170 NJ 170 NJ
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)sysid_qsys_0.reset,(MASTER)clk_0.clk_reset,(MASTER)hps_0.h2f_reset,(SLAVE)servo_PWM_0.reset,(SLAVE)switches.reset) 1 1 2 410 290 720
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)sysid_qsys_0.control_slave,(SLAVE)servo_PWM_0.s0,(SLAVE)switches.s1,(MASTER)hps_0.h2f_lw_axi_master) 1 2 1 740
 levelinfo -pg 1 0 200 950
 levelinfo -hier soc_system 210 240 530 790 940

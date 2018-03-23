@@ -123,13 +123,6 @@ agreement for further details.
 		(line (pt 0 920)(pt 224 920)(line_width 1))
 	)
 	(port
-		(pt 0 1000)
-		(input)
-		(text "switches_external_connection_export[9..0]" (rect 0 0 167 12)(font "Arial" (font_size 8)))
-		(text "switches_external_connection_export[9..0]" (rect 4 989 250 1000)(font "Arial" (font_size 8)))
-		(line (pt 0 1000)(pt 224 1000)(line_width 3))
-	)
-	(port
 		(pt 0 112)
 		(output)
 		(text "hps_io_hps_io_emac1_inst_TX_CLK" (rect 0 0 152 12)(font "Arial" (font_size 8)))
@@ -310,6 +303,13 @@ agreement for further details.
 		(text "servo_pwm_0_conduit_end_export_export" (rect 0 0 173 12)(font "Arial" (font_size 8)))
 		(text "servo_pwm_0_conduit_end_export_export" (rect 4 949 226 960)(font "Arial" (font_size 8)))
 		(line (pt 0 960)(pt 224 960)(line_width 1))
+	)
+	(port
+		(pt 0 1000)
+		(output)
+		(text "servo_pwm_1_conduit_end_export_export" (rect 0 0 172 12)(font "Arial" (font_size 8)))
+		(text "servo_pwm_1_conduit_end_export_export" (rect 4 989 226 1000)(font "Arial" (font_size 8)))
+		(line (pt 0 1000)(pt 224 1000)(line_width 1))
 	)
 	(port
 		(pt 0 208)
@@ -581,7 +581,7 @@ agreement for further details.
 		(text "reset_n" (rect 229 915 500 1840)(font "Arial" (color 0 0 0)))
 		(text "servo_pwm_0_conduit_end_export" (rect 20 931 220 1875)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 229 955 494 1920)(font "Arial" (color 0 0 0)))
-		(text "switches_external_connection" (rect 51 971 270 1955)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "servo_pwm_1_conduit_end_export" (rect 22 971 224 1955)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 229 995 494 2000)(font "Arial" (color 0 0 0)))
 		(text " soc_system " (rect 600 1016 1272 2042)(font "Arial" ))
 		(line (pt 224 32)(pt 432 32)(line_width 1))

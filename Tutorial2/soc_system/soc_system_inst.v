@@ -67,6 +67,6 @@
 		.memory_oct_rzqin                      (<connected-to-memory_oct_rzqin>),                      //                               .oct_rzqin
 		.reset_reset_n                         (<connected-to-reset_reset_n>),                         //                          reset.reset_n
 		.servo_pwm_0_conduit_end_export_export (<connected-to-servo_pwm_0_conduit_end_export_export>), // servo_pwm_0_conduit_end_export.export
-		.switches_external_connection_export   (<connected-to-switches_external_connection_export>)    //   switches_external_connection.export
+		.servo_pwm_1_conduit_end_export_export (<connected-to-servo_pwm_1_conduit_end_export_export>)  // servo_pwm_1_conduit_end_export.export
 	);
 
