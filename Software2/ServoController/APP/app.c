@@ -71,9 +71,12 @@
 #define SERVO_PWM_0_ADDR 0x00000600
 #define SERVO_PWM_0_BASE FPGA_TO_HPS_LW_ADDR(SERVO_PWM_0_ADDR)
 
-#define APP_TASK1_PRIO 5
-#define APP_TASKS_PRIO 6
+#define SERVO_TASK_PRIO 6
+#define APP_TASKS_PRIO 7
+#define SWITCH_TASK_PRIO 5
+
 #define TASK_STACK_SIZE 4096
+#define QSIZE 50
 
 /*
 *********************************************************************************************************
@@ -82,8 +85,11 @@
 */
 
 CPU_STK AppTaskStartStk[TASK_STACK_SIZE];
-CPU_STK Task1Stk[TASK_STACK_SIZE];
-CPU_STK Task2Stk[TASK_STACK_SIZE];
+CPU_STK ServoTaskStk[TASK_STACK_SIZE];
+CPU_STK SwitchTaskStk[TASK_STACK_SIZE];
+
+OS_EVENT OSQ;
+void *OSQTable[50];
 
 /*
 *********************************************************************************************************
@@ -91,8 +97,9 @@ CPU_STK Task2Stk[TASK_STACK_SIZE];
 *********************************************************************************************************
 */
 
-static  void  AppTaskStart              (void        *p_arg);
-static void task1			(void *pdata);
+static void AppTaskStart (void *p_arg);
+static void ServoTask (void *pdata);
+static void SwitchTask (void *pdata);
 
 
 /*
@@ -128,8 +135,10 @@ int main ()
 
     BSP_Init();
 
-
     OSInit();
+
+    // create queue
+    OSQ = *OSQCreate (OSQTable[0], 50);
 
 
     os_err = OSTaskCreateExt((void (*)(void *)) AppTaskStart,   /* Create the start task.                               */
@@ -146,17 +155,31 @@ int main ()
             ; /* Handle error. */
         }
 
-    os_err = OSTaskCreateExt((void (*)(void *)) task1,   /* Create the start task.                               */
+    os_err = OSTaskCreateExt((void (*)(void *)) ServoTask,   /* Create the start task.                               */
                                 (void          * ) 0,
-                                (OS_STK        * )&Task1Stk[TASK_STACK_SIZE - 1],
-                                (INT8U           ) APP_TASK1_PRIO,
-                                (INT16U          ) APP_TASK1_PRIO,  // reuse prio for ID
-                                (OS_STK        * )&Task1Stk[0],
+                                (OS_STK        * )&ServoTaskStk[TASK_STACK_SIZE - 1],
+                                (INT8U           ) SERVO_TASK_PRIO,
+                                (INT16U          ) SERVO_TASK_PRIO,  // reuse prio for ID
+                                (OS_STK        * )&ServoTaskStk[0],
                                 (INT32U          ) TASK_STACK_SIZE,
                                 (void          * )0,
                                 (INT16U          )(OS_TASK_OPT_STK_CLR | OS_TASK_OPT_STK_CHK));
 
     if (os_err != OS_ERR_NONE) {
+            ; /* Handle error. */
+        }
+
+    os_err = OSTaskCreateExt((void (*)(void *)) SwitchTask,   /* Create the start task.                               */
+                                 (void          * ) 0,
+                                 (OS_STK        * )&SwitchTaskStk[TASK_STACK_SIZE - 1],
+                                 (INT8U           ) SWITCH_TASK_PRIO,
+                                 (INT16U          ) SWITCH_TASK_PRIO,  // reuse prio for ID
+                                 (OS_STK        * )&CheckSwitchTaskStk[0],
+                                 (INT32U          ) TASK_STACK_SIZE,
+                                 (void          * )0,
+                                 (INT16U          )(OS_TASK_OPT_STK_CLR | OS_TASK_OPT_STK_CHK));
+
+        if (os_err != OS_ERR_NONE) {
             ; /* Handle error. */
         }
 
@@ -204,7 +227,7 @@ static  void  AppTaskStart (void *p_arg)
 }
 
 /* Prints "Hello World" and sleeps for three seconds */
-static void task1(void *pdata)
+static void ServoTask(void *pdata)
 {
 	BSP_OS_TmrTickInit(OS_TICKS_PER_SEC);                       /* Configure and enable OS tick interrupt.              */
   while (1)
@@ -225,4 +248,38 @@ static void task1(void *pdata)
     alt_write_word(SERVO_PWM_0_BASE, 0);
     OSTimeDlyHMSM(0, 0, 2, 0);
   }
+}
+
+static void SwitchTask (void *p_arg) {
+
+	BSP_OS_TmrTickInit(OS_TICKS_PER_SEC);                       /* Configure and enable OS tick interrupt.              */
+
+	uint32_t result;
+	uint32_t old_result = -1; // impossible value
+
+	for (;;) {
+
+        result = alt_read_word(SW_BASE);
+//        printf("Iter : %d ->", i);
+//        printf("%x", result);
+//        printf("\n");
+
+        if (old_result == -1|| result != old_result) {
+        	printf("%x", old_result);
+        	printf("%x", result);
+
+			char full_line[40];
+	//        bzero(full_line, 40);
+			sprintf(full_line, "Switch Reader\nSwitches : 0x%x\n", result);
+
+	//        printf("%s", full_line);
+
+	        OSQPost(&OSQ, (void *) full_line);
+
+			old_result = result;
+        }
+
+        OSTimeDly(OS_TICKS_PER_SEC);
+	}
+
 }
