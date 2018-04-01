@@ -1567,6 +1567,10 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[34]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_34
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[35]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_35
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE servo_controller_tb.vhd
 set_global_assignment -name VHDL_FILE new_component.vhd
 set_global_assignment -name TCL_SCRIPT_FILE ../Pin_Assignments_Presets/pin_assignment_DE1_SoC.tcl
 set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip

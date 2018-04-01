@@ -1,32 +1,32 @@
 |tutorial2
 CLOCK_50 => soc_system:u0.clk_clk
 KEY_N_0 => soc_system:u0.reset_reset_n
-HPS_DDR3_ADDR[0] << soc_system:u0.memory_mem_a[0]
-HPS_DDR3_ADDR[1] << soc_system:u0.memory_mem_a[1]
-HPS_DDR3_ADDR[2] << soc_system:u0.memory_mem_a[2]
-HPS_DDR3_ADDR[3] << soc_system:u0.memory_mem_a[3]
-HPS_DDR3_ADDR[4] << soc_system:u0.memory_mem_a[4]
-HPS_DDR3_ADDR[5] << soc_system:u0.memory_mem_a[5]
-HPS_DDR3_ADDR[6] << soc_system:u0.memory_mem_a[6]
-HPS_DDR3_ADDR[7] << soc_system:u0.memory_mem_a[7]
-HPS_DDR3_ADDR[8] << soc_system:u0.memory_mem_a[8]
-HPS_DDR3_ADDR[9] << soc_system:u0.memory_mem_a[9]
-HPS_DDR3_ADDR[10] << soc_system:u0.memory_mem_a[10]
-HPS_DDR3_ADDR[11] << soc_system:u0.memory_mem_a[11]
-HPS_DDR3_ADDR[12] << soc_system:u0.memory_mem_a[12]
-HPS_DDR3_ADDR[13] << soc_system:u0.memory_mem_a[13]
-HPS_DDR3_ADDR[14] << soc_system:u0.memory_mem_a[14]
-HPS_DDR3_BA[0] << soc_system:u0.memory_mem_ba[0]
-HPS_DDR3_BA[1] << soc_system:u0.memory_mem_ba[1]
-HPS_DDR3_BA[2] << soc_system:u0.memory_mem_ba[2]
-HPS_DDR3_CK_P << soc_system:u0.memory_mem_ck
-HPS_DDR3_CK_N << soc_system:u0.memory_mem_ck_n
-HPS_DDR3_CKE << soc_system:u0.memory_mem_cke
-HPS_DDR3_CS_N << soc_system:u0.memory_mem_cs_n
-HPS_DDR3_RAS_N << soc_system:u0.memory_mem_ras_n
-HPS_DDR3_CAS_N << soc_system:u0.memory_mem_cas_n
-HPS_DDR3_WE_N << soc_system:u0.memory_mem_we_n
-HPS_DDR3_RESET_N << soc_system:u0.memory_mem_reset_n
+HPS_DDR3_ADDR[0] <= soc_system:u0.memory_mem_a[0]
+HPS_DDR3_ADDR[1] <= soc_system:u0.memory_mem_a[1]
+HPS_DDR3_ADDR[2] <= soc_system:u0.memory_mem_a[2]
+HPS_DDR3_ADDR[3] <= soc_system:u0.memory_mem_a[3]
+HPS_DDR3_ADDR[4] <= soc_system:u0.memory_mem_a[4]
+HPS_DDR3_ADDR[5] <= soc_system:u0.memory_mem_a[5]
+HPS_DDR3_ADDR[6] <= soc_system:u0.memory_mem_a[6]
+HPS_DDR3_ADDR[7] <= soc_system:u0.memory_mem_a[7]
+HPS_DDR3_ADDR[8] <= soc_system:u0.memory_mem_a[8]
+HPS_DDR3_ADDR[9] <= soc_system:u0.memory_mem_a[9]
+HPS_DDR3_ADDR[10] <= soc_system:u0.memory_mem_a[10]
+HPS_DDR3_ADDR[11] <= soc_system:u0.memory_mem_a[11]
+HPS_DDR3_ADDR[12] <= soc_system:u0.memory_mem_a[12]
+HPS_DDR3_ADDR[13] <= soc_system:u0.memory_mem_a[13]
+HPS_DDR3_ADDR[14] <= soc_system:u0.memory_mem_a[14]
+HPS_DDR3_BA[0] <= soc_system:u0.memory_mem_ba[0]
+HPS_DDR3_BA[1] <= soc_system:u0.memory_mem_ba[1]
+HPS_DDR3_BA[2] <= soc_system:u0.memory_mem_ba[2]
+HPS_DDR3_CK_P <= soc_system:u0.memory_mem_ck
+HPS_DDR3_CK_N <= soc_system:u0.memory_mem_ck_n
+HPS_DDR3_CKE <= soc_system:u0.memory_mem_cke
+HPS_DDR3_CS_N <= soc_system:u0.memory_mem_cs_n
+HPS_DDR3_RAS_N <= soc_system:u0.memory_mem_ras_n
+HPS_DDR3_CAS_N <= soc_system:u0.memory_mem_cas_n
+HPS_DDR3_WE_N <= soc_system:u0.memory_mem_we_n
+HPS_DDR3_RESET_N <= soc_system:u0.memory_mem_reset_n
 HPS_DDR3_DQ[0] <> soc_system:u0.memory_mem_dq[0]
 HPS_DDR3_DQ[1] <> soc_system:u0.memory_mem_dq[1]
 HPS_DDR3_DQ[2] <> soc_system:u0.memory_mem_dq[2]
@@ -67,28 +67,28 @@ HPS_DDR3_DQS_N[0] <> soc_system:u0.memory_mem_dqs_n[0]
 HPS_DDR3_DQS_N[1] <> soc_system:u0.memory_mem_dqs_n[1]
 HPS_DDR3_DQS_N[2] <> soc_system:u0.memory_mem_dqs_n[2]
 HPS_DDR3_DQS_N[3] <> soc_system:u0.memory_mem_dqs_n[3]
-HPS_DDR3_ODT << soc_system:u0.memory_mem_odt
-HPS_DDR3_DM[0] << soc_system:u0.memory_mem_dm[0]
-HPS_DDR3_DM[1] << soc_system:u0.memory_mem_dm[1]
-HPS_DDR3_DM[2] << soc_system:u0.memory_mem_dm[2]
-HPS_DDR3_DM[3] << soc_system:u0.memory_mem_dm[3]
+HPS_DDR3_ODT <= soc_system:u0.memory_mem_odt
+HPS_DDR3_DM[0] <= soc_system:u0.memory_mem_dm[0]
+HPS_DDR3_DM[1] <= soc_system:u0.memory_mem_dm[1]
+HPS_DDR3_DM[2] <= soc_system:u0.memory_mem_dm[2]
+HPS_DDR3_DM[3] <= soc_system:u0.memory_mem_dm[3]
 HPS_DDR3_RZQ => soc_system:u0.memory_oct_rzqin
 HPS_ENET_RX_CLK => soc_system:u0.hps_io_hps_io_emac1_inst_RX_CLK
 HPS_ENET_INT_N <> soc_system:u0.hps_io_hps_io_gpio_inst_GPIO35
-HPS_ENET_MDC << soc_system:u0.hps_io_hps_io_emac1_inst_MDC
+HPS_ENET_MDC <= soc_system:u0.hps_io_hps_io_emac1_inst_MDC
 HPS_ENET_MDIO <> soc_system:u0.hps_io_hps_io_emac1_inst_MDIO
 HPS_ENET_RX_DATA_0 => soc_system:u0.hps_io_hps_io_emac1_inst_RXD0
 HPS_ENET_RX_DATA_1 => soc_system:u0.hps_io_hps_io_emac1_inst_RXD1
 HPS_ENET_RX_DATA_2 => soc_system:u0.hps_io_hps_io_emac1_inst_RXD2
 HPS_ENET_RX_DATA_3 => soc_system:u0.hps_io_hps_io_emac1_inst_RXD3
 HPS_ENET_RX_DV => soc_system:u0.hps_io_hps_io_emac1_inst_RX_CTL
-HPS_ENET_GTX_CLK << soc_system:u0.hps_io_hps_io_emac1_inst_TX_CLK
-HPS_ENET_TX_DATA_0 << soc_system:u0.hps_io_hps_io_emac1_inst_TXD0
-HPS_ENET_TX_DATA_1 << soc_system:u0.hps_io_hps_io_emac1_inst_TXD1
-HPS_ENET_TX_DATA_2 << soc_system:u0.hps_io_hps_io_emac1_inst_TXD2
-HPS_ENET_TX_DATA_3 << soc_system:u0.hps_io_hps_io_emac1_inst_TXD3
-HPS_ENET_TX_EN << soc_system:u0.hps_io_hps_io_emac1_inst_TX_CTL
-HPS_SD_CLK << soc_system:u0.hps_io_hps_io_sdio_inst_CLK
+HPS_ENET_GTX_CLK <= soc_system:u0.hps_io_hps_io_emac1_inst_TX_CLK
+HPS_ENET_TX_DATA_0 <= soc_system:u0.hps_io_hps_io_emac1_inst_TXD0
+HPS_ENET_TX_DATA_1 <= soc_system:u0.hps_io_hps_io_emac1_inst_TXD1
+HPS_ENET_TX_DATA_2 <= soc_system:u0.hps_io_hps_io_emac1_inst_TXD2
+HPS_ENET_TX_DATA_3 <= soc_system:u0.hps_io_hps_io_emac1_inst_TXD3
+HPS_ENET_TX_EN <= soc_system:u0.hps_io_hps_io_emac1_inst_TX_CTL
+HPS_SD_CLK <= soc_system:u0.hps_io_hps_io_sdio_inst_CLK
 HPS_SD_CMD <> soc_system:u0.hps_io_hps_io_sdio_inst_CMD
 HPS_SD_DATA_0 <> soc_system:u0.hps_io_hps_io_sdio_inst_D0
 HPS_SD_DATA_1 <> soc_system:u0.hps_io_hps_io_sdio_inst_D1
@@ -105,13 +105,13 @@ HPS_USB_DATA_6 <> soc_system:u0.hps_io_hps_io_usb1_inst_D6
 HPS_USB_DATA_7 <> soc_system:u0.hps_io_hps_io_usb1_inst_D7
 HPS_USB_DIR => soc_system:u0.hps_io_hps_io_usb1_inst_DIR
 HPS_USB_NXT => soc_system:u0.hps_io_hps_io_usb1_inst_NXT
-HPS_USB_STP << soc_system:u0.hps_io_hps_io_usb1_inst_STP
-HPS_SPIM_CLK << soc_system:u0.hps_io_hps_io_spim1_inst_CLK
+HPS_USB_STP <= soc_system:u0.hps_io_hps_io_usb1_inst_STP
+HPS_SPIM_CLK <= soc_system:u0.hps_io_hps_io_spim1_inst_CLK
 HPS_SPIM_MISO => soc_system:u0.hps_io_hps_io_spim1_inst_MISO
-HPS_SPIM_MOSI << soc_system:u0.hps_io_hps_io_spim1_inst_MOSI
-HPS_SPIM_SS << soc_system:u0.hps_io_hps_io_spim1_inst_SS0
+HPS_SPIM_MOSI <= soc_system:u0.hps_io_hps_io_spim1_inst_MOSI
+HPS_SPIM_SS <= soc_system:u0.hps_io_hps_io_spim1_inst_SS0
 HPS_UART_RX => soc_system:u0.hps_io_hps_io_uart0_inst_RX
-HPS_UART_TX << soc_system:u0.hps_io_hps_io_uart0_inst_TX
+HPS_UART_TX <= soc_system:u0.hps_io_hps_io_uart0_inst_TX
 HPS_CONV_USB_N <> soc_system:u0.hps_io_hps_io_gpio_inst_GPIO09
 HPS_I2C1_SCLK <> soc_system:u0.hps_io_hps_io_i2c0_inst_SCL
 HPS_I2C1_SDAT <> soc_system:u0.hps_io_hps_io_i2c0_inst_SDA
@@ -122,58 +122,58 @@ HPS_KEY_N <> soc_system:u0.hps_io_hps_io_gpio_inst_GPIO54
 HPS_LED <> soc_system:u0.hps_io_hps_io_gpio_inst_GPIO53
 HPS_LTC_GPIO <> soc_system:u0.hps_io_hps_io_gpio_inst_GPIO40
 HPS_GSENSOR_INT <> soc_system:u0.hps_io_hps_io_gpio_inst_GPIO61
-GPIO_0[0] << <GND>
-GPIO_0[1] << <GND>
-GPIO_0[2] << <GND>
-GPIO_0[3] << <GND>
-GPIO_0[4] << <GND>
-GPIO_0[5] << <GND>
-GPIO_0[6] << <GND>
-GPIO_0[7] << <GND>
-GPIO_0[8] << <GND>
-GPIO_0[9] << <GND>
-GPIO_0[10] << <GND>
-GPIO_0[11] << soc_system:u0.servo_pwm_0_conduit_end_export_export
-GPIO_0[12] << <GND>
-GPIO_0[13] << <GND>
-GPIO_0[14] << <GND>
-GPIO_0[15] << <GND>
-GPIO_0[16] << <GND>
-GPIO_0[17] << <GND>
-GPIO_0[18] << <GND>
-GPIO_0[19] << <GND>
-GPIO_0[20] << <GND>
-GPIO_0[21] << <GND>
-GPIO_0[22] << <GND>
-GPIO_0[23] << <GND>
-GPIO_0[24] << <GND>
-GPIO_0[25] << <GND>
-GPIO_0[26] << <GND>
-GPIO_0[27] << <GND>
-GPIO_0[28] << <GND>
-GPIO_0[29] << <GND>
-GPIO_0[30] << <GND>
-GPIO_0[31] << <GND>
-GPIO_0[32] << <GND>
-GPIO_0[33] << <GND>
-GPIO_0[34] << <GND>
-GPIO_0[35] << <GND>
-SW[0] => soc_system:u0.switches_external_connection_export[0]
-SW[1] => soc_system:u0.switches_external_connection_export[1]
-SW[2] => soc_system:u0.switches_external_connection_export[2]
-SW[3] => soc_system:u0.switches_external_connection_export[3]
-SW[4] => soc_system:u0.switches_external_connection_export[4]
-SW[5] => soc_system:u0.switches_external_connection_export[5]
-SW[6] => soc_system:u0.switches_external_connection_export[6]
-SW[7] => soc_system:u0.switches_external_connection_export[7]
-SW[8] => soc_system:u0.switches_external_connection_export[8]
-SW[9] => soc_system:u0.switches_external_connection_export[9]
+GPIO_0[0] <= <GND>
+GPIO_0[1] <= <GND>
+GPIO_0[2] <= <GND>
+GPIO_0[3] <= <GND>
+GPIO_0[4] <= <GND>
+GPIO_0[5] <= <GND>
+GPIO_0[6] <= <GND>
+GPIO_0[7] <= <GND>
+GPIO_0[8] <= <GND>
+GPIO_0[9] <= <GND>
+GPIO_0[10] <= <GND>
+GPIO_0[11] <= soc_system:u0.servo_pwm_0_export
+GPIO_0[12] <= soc_system:u0.servo_pwm_1_export
+GPIO_0[13] <= <GND>
+GPIO_0[14] <= <GND>
+GPIO_0[15] <= <GND>
+GPIO_0[16] <= <GND>
+GPIO_0[17] <= <GND>
+GPIO_0[18] <= <GND>
+GPIO_0[19] <= <GND>
+GPIO_0[20] <= <GND>
+GPIO_0[21] <= <GND>
+GPIO_0[22] <= <GND>
+GPIO_0[23] <= <GND>
+GPIO_0[24] <= <GND>
+GPIO_0[25] <= <GND>
+GPIO_0[26] <= <GND>
+GPIO_0[27] <= <GND>
+GPIO_0[28] <= <GND>
+GPIO_0[29] <= <GND>
+GPIO_0[30] <= <GND>
+GPIO_0[31] <= <GND>
+GPIO_0[32] <= <GND>
+GPIO_0[33] <= <GND>
+GPIO_0[34] <= <GND>
+GPIO_0[35] <= <GND>
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
 
 
 |tutorial2|soc_system:u0
 clk_clk => soc_system_hps_0:hps_0.h2f_lw_axi_clk
 clk_clk => new_component:servo_pwm_0.clk
-clk_clk => soc_system_switches:switches.clk
+clk_clk => new_component:servo_pwm_1.clk
 clk_clk => soc_system_sysid_qsys_0:sysid_qsys_0.clock
 clk_clk => soc_system_mm_interconnect_0:mm_interconnect_0.clk_0_clk_clk
 clk_clk => soc_system_rst_controller:rst_controller.clk
@@ -300,17 +300,8 @@ memory_mem_dm[2] <= soc_system_hps_0:hps_0.mem_dm[2]
 memory_mem_dm[3] <= soc_system_hps_0:hps_0.mem_dm[3]
 memory_oct_rzqin => soc_system_hps_0:hps_0.oct_rzqin
 reset_reset_n => soc_system_rst_controller:rst_controller.reset_in0
-servo_pwm_0_conduit_end_export_export <= new_component:servo_pwm_0.conduit_end_servo
-switches_external_connection_export[0] => soc_system_switches:switches.in_port[0]
-switches_external_connection_export[1] => soc_system_switches:switches.in_port[1]
-switches_external_connection_export[2] => soc_system_switches:switches.in_port[2]
-switches_external_connection_export[3] => soc_system_switches:switches.in_port[3]
-switches_external_connection_export[4] => soc_system_switches:switches.in_port[4]
-switches_external_connection_export[5] => soc_system_switches:switches.in_port[5]
-switches_external_connection_export[6] => soc_system_switches:switches.in_port[6]
-switches_external_connection_export[7] => soc_system_switches:switches.in_port[7]
-switches_external_connection_export[8] => soc_system_switches:switches.in_port[8]
-switches_external_connection_export[9] => soc_system_switches:switches.in_port[9]
+servo_pwm_0_export <= new_component:servo_pwm_0.conduit_end_servo
+servo_pwm_1_export <= new_component:servo_pwm_1.conduit_end_servo
 
 
 |tutorial2|soc_system:u0|soc_system_hps_0:hps_0
@@ -9728,21 +9719,21 @@ clk => \pwm:period_count[30].CLK
 clk => \pwm:period_count[31].CLK
 reset_n => \pwm:pulse_count[0].ACLR
 reset_n => \pwm:pulse_count[1].ACLR
-reset_n => \pwm:pulse_count[2].PRESET
-reset_n => \pwm:pulse_count[3].ACLR
-reset_n => \pwm:pulse_count[4].ACLR
-reset_n => \pwm:pulse_count[5].ACLR
-reset_n => \pwm:pulse_count[6].ACLR
+reset_n => \pwm:pulse_count[2].ACLR
+reset_n => \pwm:pulse_count[3].PRESET
+reset_n => \pwm:pulse_count[4].PRESET
+reset_n => \pwm:pulse_count[5].PRESET
+reset_n => \pwm:pulse_count[6].PRESET
 reset_n => \pwm:pulse_count[7].PRESET
-reset_n => \pwm:pulse_count[8].PRESET
-reset_n => \pwm:pulse_count[9].PRESET
-reset_n => \pwm:pulse_count[10].ACLR
+reset_n => \pwm:pulse_count[8].ACLR
+reset_n => \pwm:pulse_count[9].ACLR
+reset_n => \pwm:pulse_count[10].PRESET
 reset_n => \pwm:pulse_count[11].ACLR
 reset_n => \pwm:pulse_count[12].ACLR
-reset_n => \pwm:pulse_count[13].ACLR
+reset_n => \pwm:pulse_count[13].PRESET
 reset_n => \pwm:pulse_count[14].ACLR
 reset_n => \pwm:pulse_count[15].ACLR
-reset_n => \pwm:pulse_count[16].ACLR
+reset_n => \pwm:pulse_count[16].PRESET
 reset_n => \pwm:pulse_count[17].ACLR
 reset_n => \pwm:pulse_count[18].ACLR
 reset_n => \pwm:pulse_count[19].ACLR
@@ -9762,22 +9753,22 @@ reset_n => \pwm:period_count[0].ACLR
 reset_n => \pwm:period_count[1].ACLR
 reset_n => \pwm:period_count[2].ACLR
 reset_n => \pwm:period_count[3].ACLR
-reset_n => \pwm:period_count[4].PRESET
+reset_n => \pwm:period_count[4].ACLR
 reset_n => \pwm:period_count[5].ACLR
 reset_n => \pwm:period_count[6].PRESET
-reset_n => \pwm:period_count[7].PRESET
-reset_n => \pwm:period_count[8].PRESET
+reset_n => \pwm:period_count[7].ACLR
+reset_n => \pwm:period_count[8].ACLR
 reset_n => \pwm:period_count[9].PRESET
-reset_n => \pwm:period_count[10].PRESET
+reset_n => \pwm:period_count[10].ACLR
 reset_n => \pwm:period_count[11].ACLR
 reset_n => \pwm:period_count[12].ACLR
 reset_n => \pwm:period_count[13].ACLR
-reset_n => \pwm:period_count[14].ACLR
+reset_n => \pwm:period_count[14].PRESET
 reset_n => \pwm:period_count[15].ACLR
-reset_n => \pwm:period_count[16].ACLR
-reset_n => \pwm:period_count[17].ACLR
-reset_n => \pwm:period_count[18].ACLR
-reset_n => \pwm:period_count[19].ACLR
+reset_n => \pwm:period_count[16].PRESET
+reset_n => \pwm:period_count[17].PRESET
+reset_n => \pwm:period_count[18].PRESET
+reset_n => \pwm:period_count[19].PRESET
 reset_n => \pwm:period_count[20].ACLR
 reset_n => \pwm:period_count[21].ACLR
 reset_n => \pwm:period_count[22].ACLR
@@ -9923,115 +9914,268 @@ avs_s0_writedata[30] => direction[30].DATAIN
 avs_s0_writedata[31] => direction[31].DATAIN
 
 
-|tutorial2|soc_system:u0|soc_system_switches:switches
-address[0] => Equal0.IN31
-address[1] => Equal0.IN30
-clk => readdata[0]~reg0.CLK
-clk => readdata[1]~reg0.CLK
-clk => readdata[2]~reg0.CLK
-clk => readdata[3]~reg0.CLK
-clk => readdata[4]~reg0.CLK
-clk => readdata[5]~reg0.CLK
-clk => readdata[6]~reg0.CLK
-clk => readdata[7]~reg0.CLK
-clk => readdata[8]~reg0.CLK
-clk => readdata[9]~reg0.CLK
-clk => readdata[10]~reg0.CLK
-clk => readdata[11]~reg0.CLK
-clk => readdata[12]~reg0.CLK
-clk => readdata[13]~reg0.CLK
-clk => readdata[14]~reg0.CLK
-clk => readdata[15]~reg0.CLK
-clk => readdata[16]~reg0.CLK
-clk => readdata[17]~reg0.CLK
-clk => readdata[18]~reg0.CLK
-clk => readdata[19]~reg0.CLK
-clk => readdata[20]~reg0.CLK
-clk => readdata[21]~reg0.CLK
-clk => readdata[22]~reg0.CLK
-clk => readdata[23]~reg0.CLK
-clk => readdata[24]~reg0.CLK
-clk => readdata[25]~reg0.CLK
-clk => readdata[26]~reg0.CLK
-clk => readdata[27]~reg0.CLK
-clk => readdata[28]~reg0.CLK
-clk => readdata[29]~reg0.CLK
-clk => readdata[30]~reg0.CLK
-clk => readdata[31]~reg0.CLK
-in_port[0] => read_mux_out[0].IN1
-in_port[1] => read_mux_out[1].IN1
-in_port[2] => read_mux_out[2].IN1
-in_port[3] => read_mux_out[3].IN1
-in_port[4] => read_mux_out[4].IN1
-in_port[5] => read_mux_out[5].IN1
-in_port[6] => read_mux_out[6].IN1
-in_port[7] => read_mux_out[7].IN1
-in_port[8] => read_mux_out[8].IN1
-in_port[9] => read_mux_out[9].IN1
-reset_n => readdata[0]~reg0.ACLR
-reset_n => readdata[1]~reg0.ACLR
-reset_n => readdata[2]~reg0.ACLR
-reset_n => readdata[3]~reg0.ACLR
-reset_n => readdata[4]~reg0.ACLR
-reset_n => readdata[5]~reg0.ACLR
-reset_n => readdata[6]~reg0.ACLR
-reset_n => readdata[7]~reg0.ACLR
-reset_n => readdata[8]~reg0.ACLR
-reset_n => readdata[9]~reg0.ACLR
-reset_n => readdata[10]~reg0.ACLR
-reset_n => readdata[11]~reg0.ACLR
-reset_n => readdata[12]~reg0.ACLR
-reset_n => readdata[13]~reg0.ACLR
-reset_n => readdata[14]~reg0.ACLR
-reset_n => readdata[15]~reg0.ACLR
-reset_n => readdata[16]~reg0.ACLR
-reset_n => readdata[17]~reg0.ACLR
-reset_n => readdata[18]~reg0.ACLR
-reset_n => readdata[19]~reg0.ACLR
-reset_n => readdata[20]~reg0.ACLR
-reset_n => readdata[21]~reg0.ACLR
-reset_n => readdata[22]~reg0.ACLR
-reset_n => readdata[23]~reg0.ACLR
-reset_n => readdata[24]~reg0.ACLR
-reset_n => readdata[25]~reg0.ACLR
-reset_n => readdata[26]~reg0.ACLR
-reset_n => readdata[27]~reg0.ACLR
-reset_n => readdata[28]~reg0.ACLR
-reset_n => readdata[29]~reg0.ACLR
-reset_n => readdata[30]~reg0.ACLR
-reset_n => readdata[31]~reg0.ACLR
-readdata[0] <= readdata[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[1] <= readdata[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[2] <= readdata[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[3] <= readdata[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[4] <= readdata[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[5] <= readdata[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[6] <= readdata[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[7] <= readdata[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[8] <= readdata[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[9] <= readdata[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[10] <= readdata[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[11] <= readdata[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[12] <= readdata[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[13] <= readdata[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[14] <= readdata[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[15] <= readdata[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[16] <= readdata[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[17] <= readdata[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[18] <= readdata[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[19] <= readdata[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[20] <= readdata[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[21] <= readdata[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[22] <= readdata[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[23] <= readdata[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[24] <= readdata[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[25] <= readdata[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[26] <= readdata[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[27] <= readdata[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[28] <= readdata[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[29] <= readdata[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|tutorial2|soc_system:u0|new_component:servo_pwm_1
+clk => current_state.CLK
+clk => conduit_end_servo~reg0.CLK
+clk => \pwm:pulse_count[0].CLK
+clk => \pwm:pulse_count[1].CLK
+clk => \pwm:pulse_count[2].CLK
+clk => \pwm:pulse_count[3].CLK
+clk => \pwm:pulse_count[4].CLK
+clk => \pwm:pulse_count[5].CLK
+clk => \pwm:pulse_count[6].CLK
+clk => \pwm:pulse_count[7].CLK
+clk => \pwm:pulse_count[8].CLK
+clk => \pwm:pulse_count[9].CLK
+clk => \pwm:pulse_count[10].CLK
+clk => \pwm:pulse_count[11].CLK
+clk => \pwm:pulse_count[12].CLK
+clk => \pwm:pulse_count[13].CLK
+clk => \pwm:pulse_count[14].CLK
+clk => \pwm:pulse_count[15].CLK
+clk => \pwm:pulse_count[16].CLK
+clk => \pwm:pulse_count[17].CLK
+clk => \pwm:pulse_count[18].CLK
+clk => \pwm:pulse_count[19].CLK
+clk => \pwm:pulse_count[20].CLK
+clk => \pwm:pulse_count[21].CLK
+clk => \pwm:pulse_count[22].CLK
+clk => \pwm:pulse_count[23].CLK
+clk => \pwm:pulse_count[24].CLK
+clk => \pwm:pulse_count[25].CLK
+clk => \pwm:pulse_count[26].CLK
+clk => \pwm:pulse_count[27].CLK
+clk => \pwm:pulse_count[28].CLK
+clk => \pwm:pulse_count[29].CLK
+clk => \pwm:pulse_count[30].CLK
+clk => \pwm:pulse_count[31].CLK
+clk => \pwm:period_count[0].CLK
+clk => \pwm:period_count[1].CLK
+clk => \pwm:period_count[2].CLK
+clk => \pwm:period_count[3].CLK
+clk => \pwm:period_count[4].CLK
+clk => \pwm:period_count[5].CLK
+clk => \pwm:period_count[6].CLK
+clk => \pwm:period_count[7].CLK
+clk => \pwm:period_count[8].CLK
+clk => \pwm:period_count[9].CLK
+clk => \pwm:period_count[10].CLK
+clk => \pwm:period_count[11].CLK
+clk => \pwm:period_count[12].CLK
+clk => \pwm:period_count[13].CLK
+clk => \pwm:period_count[14].CLK
+clk => \pwm:period_count[15].CLK
+clk => \pwm:period_count[16].CLK
+clk => \pwm:period_count[17].CLK
+clk => \pwm:period_count[18].CLK
+clk => \pwm:period_count[19].CLK
+clk => \pwm:period_count[20].CLK
+clk => \pwm:period_count[21].CLK
+clk => \pwm:period_count[22].CLK
+clk => \pwm:period_count[23].CLK
+clk => \pwm:period_count[24].CLK
+clk => \pwm:period_count[25].CLK
+clk => \pwm:period_count[26].CLK
+clk => \pwm:period_count[27].CLK
+clk => \pwm:period_count[28].CLK
+clk => \pwm:period_count[29].CLK
+clk => \pwm:period_count[30].CLK
+clk => \pwm:period_count[31].CLK
+reset_n => \pwm:pulse_count[0].ACLR
+reset_n => \pwm:pulse_count[1].ACLR
+reset_n => \pwm:pulse_count[2].ACLR
+reset_n => \pwm:pulse_count[3].PRESET
+reset_n => \pwm:pulse_count[4].PRESET
+reset_n => \pwm:pulse_count[5].PRESET
+reset_n => \pwm:pulse_count[6].PRESET
+reset_n => \pwm:pulse_count[7].PRESET
+reset_n => \pwm:pulse_count[8].ACLR
+reset_n => \pwm:pulse_count[9].ACLR
+reset_n => \pwm:pulse_count[10].PRESET
+reset_n => \pwm:pulse_count[11].ACLR
+reset_n => \pwm:pulse_count[12].ACLR
+reset_n => \pwm:pulse_count[13].PRESET
+reset_n => \pwm:pulse_count[14].ACLR
+reset_n => \pwm:pulse_count[15].ACLR
+reset_n => \pwm:pulse_count[16].PRESET
+reset_n => \pwm:pulse_count[17].ACLR
+reset_n => \pwm:pulse_count[18].ACLR
+reset_n => \pwm:pulse_count[19].ACLR
+reset_n => \pwm:pulse_count[20].ACLR
+reset_n => \pwm:pulse_count[21].ACLR
+reset_n => \pwm:pulse_count[22].ACLR
+reset_n => \pwm:pulse_count[23].ACLR
+reset_n => \pwm:pulse_count[24].ACLR
+reset_n => \pwm:pulse_count[25].ACLR
+reset_n => \pwm:pulse_count[26].ACLR
+reset_n => \pwm:pulse_count[27].ACLR
+reset_n => \pwm:pulse_count[28].ACLR
+reset_n => \pwm:pulse_count[29].ACLR
+reset_n => \pwm:pulse_count[30].ACLR
+reset_n => \pwm:pulse_count[31].ACLR
+reset_n => \pwm:period_count[0].ACLR
+reset_n => \pwm:period_count[1].ACLR
+reset_n => \pwm:period_count[2].ACLR
+reset_n => \pwm:period_count[3].ACLR
+reset_n => \pwm:period_count[4].ACLR
+reset_n => \pwm:period_count[5].ACLR
+reset_n => \pwm:period_count[6].PRESET
+reset_n => \pwm:period_count[7].ACLR
+reset_n => \pwm:period_count[8].ACLR
+reset_n => \pwm:period_count[9].PRESET
+reset_n => \pwm:period_count[10].ACLR
+reset_n => \pwm:period_count[11].ACLR
+reset_n => \pwm:period_count[12].ACLR
+reset_n => \pwm:period_count[13].ACLR
+reset_n => \pwm:period_count[14].PRESET
+reset_n => \pwm:period_count[15].ACLR
+reset_n => \pwm:period_count[16].PRESET
+reset_n => \pwm:period_count[17].PRESET
+reset_n => \pwm:period_count[18].PRESET
+reset_n => \pwm:period_count[19].PRESET
+reset_n => \pwm:period_count[20].ACLR
+reset_n => \pwm:period_count[21].ACLR
+reset_n => \pwm:period_count[22].ACLR
+reset_n => \pwm:period_count[23].ACLR
+reset_n => \pwm:period_count[24].ACLR
+reset_n => \pwm:period_count[25].ACLR
+reset_n => \pwm:period_count[26].ACLR
+reset_n => \pwm:period_count[27].ACLR
+reset_n => \pwm:period_count[28].ACLR
+reset_n => \pwm:period_count[29].ACLR
+reset_n => \pwm:period_count[30].ACLR
+reset_n => \pwm:period_count[31].ACLR
+reset_n => current_state.ENA
+reset_n => conduit_end_servo~reg0.ENA
+conduit_end_servo <= conduit_end_servo~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_read_n => avs_s0_readdata[0]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[1]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[2]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[3]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[4]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[5]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[6]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[7]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[8]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[9]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[10]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[11]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[12]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[13]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[14]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[15]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[16]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[17]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[18]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[19]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[20]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[21]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[22]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[23]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[24]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[25]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[26]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[27]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[28]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[29]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[30]~reg0.CLK
+avs_s0_read_n => avs_s0_readdata[31]~reg0.CLK
+avs_s0_readdata[0] <= avs_s0_readdata[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[1] <= avs_s0_readdata[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[2] <= avs_s0_readdata[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[3] <= avs_s0_readdata[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[4] <= avs_s0_readdata[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[5] <= avs_s0_readdata[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[6] <= avs_s0_readdata[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[7] <= avs_s0_readdata[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[8] <= avs_s0_readdata[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[9] <= avs_s0_readdata[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[10] <= avs_s0_readdata[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[11] <= avs_s0_readdata[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[12] <= avs_s0_readdata[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[13] <= avs_s0_readdata[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[14] <= avs_s0_readdata[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[15] <= avs_s0_readdata[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[16] <= avs_s0_readdata[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[17] <= avs_s0_readdata[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[18] <= avs_s0_readdata[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[19] <= avs_s0_readdata[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[20] <= avs_s0_readdata[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[21] <= avs_s0_readdata[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[22] <= avs_s0_readdata[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[23] <= avs_s0_readdata[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[24] <= avs_s0_readdata[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[25] <= avs_s0_readdata[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[26] <= avs_s0_readdata[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[27] <= avs_s0_readdata[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[28] <= avs_s0_readdata[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[29] <= avs_s0_readdata[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[30] <= avs_s0_readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[31] <= avs_s0_readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_write_n => direction[0].CLK
+avs_s0_write_n => direction[1].CLK
+avs_s0_write_n => direction[2].CLK
+avs_s0_write_n => direction[3].CLK
+avs_s0_write_n => direction[4].CLK
+avs_s0_write_n => direction[5].CLK
+avs_s0_write_n => direction[6].CLK
+avs_s0_write_n => direction[7].CLK
+avs_s0_write_n => direction[8].CLK
+avs_s0_write_n => direction[9].CLK
+avs_s0_write_n => direction[10].CLK
+avs_s0_write_n => direction[11].CLK
+avs_s0_write_n => direction[12].CLK
+avs_s0_write_n => direction[13].CLK
+avs_s0_write_n => direction[14].CLK
+avs_s0_write_n => direction[15].CLK
+avs_s0_write_n => direction[16].CLK
+avs_s0_write_n => direction[17].CLK
+avs_s0_write_n => direction[18].CLK
+avs_s0_write_n => direction[19].CLK
+avs_s0_write_n => direction[20].CLK
+avs_s0_write_n => direction[21].CLK
+avs_s0_write_n => direction[22].CLK
+avs_s0_write_n => direction[23].CLK
+avs_s0_write_n => direction[24].CLK
+avs_s0_write_n => direction[25].CLK
+avs_s0_write_n => direction[26].CLK
+avs_s0_write_n => direction[27].CLK
+avs_s0_write_n => direction[28].CLK
+avs_s0_write_n => direction[29].CLK
+avs_s0_write_n => direction[30].CLK
+avs_s0_write_n => direction[31].CLK
+avs_s0_writedata[0] => direction[0].DATAIN
+avs_s0_writedata[1] => direction[1].DATAIN
+avs_s0_writedata[2] => direction[2].DATAIN
+avs_s0_writedata[3] => direction[3].DATAIN
+avs_s0_writedata[4] => direction[4].DATAIN
+avs_s0_writedata[5] => direction[5].DATAIN
+avs_s0_writedata[6] => direction[6].DATAIN
+avs_s0_writedata[7] => direction[7].DATAIN
+avs_s0_writedata[8] => direction[8].DATAIN
+avs_s0_writedata[9] => direction[9].DATAIN
+avs_s0_writedata[10] => direction[10].DATAIN
+avs_s0_writedata[11] => direction[11].DATAIN
+avs_s0_writedata[12] => direction[12].DATAIN
+avs_s0_writedata[13] => direction[13].DATAIN
+avs_s0_writedata[14] => direction[14].DATAIN
+avs_s0_writedata[15] => direction[15].DATAIN
+avs_s0_writedata[16] => direction[16].DATAIN
+avs_s0_writedata[17] => direction[17].DATAIN
+avs_s0_writedata[18] => direction[18].DATAIN
+avs_s0_writedata[19] => direction[19].DATAIN
+avs_s0_writedata[20] => direction[20].DATAIN
+avs_s0_writedata[21] => direction[21].DATAIN
+avs_s0_writedata[22] => direction[22].DATAIN
+avs_s0_writedata[23] => direction[23].DATAIN
+avs_s0_writedata[24] => direction[24].DATAIN
+avs_s0_writedata[25] => direction[25].DATAIN
+avs_s0_writedata[26] => direction[26].DATAIN
+avs_s0_writedata[27] => direction[27].DATAIN
+avs_s0_writedata[28] => direction[28].DATAIN
+avs_s0_writedata[29] => direction[29].DATAIN
+avs_s0_writedata[30] => direction[30].DATAIN
+avs_s0_writedata[31] => direction[31].DATAIN
 
 
 |tutorial2|soc_system:u0|soc_system_sysid_qsys_0:sysid_qsys_0
@@ -10041,37 +10185,40 @@ address => readdata[27].DATAIN
 address => readdata[25].DATAIN
 address => readdata[23].DATAIN
 address => readdata[21].DATAIN
+address => readdata[20].DATAIN
 address => readdata[19].DATAIN
 address => readdata[18].DATAIN
-address => readdata[12].DATAIN
-address => readdata[11].DATAIN
+address => readdata[16].DATAIN
+address => readdata[15].DATAIN
 address => readdata[9].DATAIN
+address => readdata[8].DATAIN
 address => readdata[7].DATAIN
-address => readdata[3].DATAIN
+address => readdata[2].DATAIN
 address => readdata[1].DATAIN
+address => readdata[0].DATAIN
 clock => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
-readdata[0] <= <GND>
+readdata[0] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[1] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[2] <= <GND>
-readdata[3] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[2] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[3] <= <GND>
 readdata[4] <= <GND>
 readdata[5] <= <GND>
 readdata[6] <= <GND>
 readdata[7] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[8] <= <GND>
+readdata[8] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[9] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[10] <= <GND>
-readdata[11] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[12] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[11] <= <GND>
+readdata[12] <= <GND>
 readdata[13] <= <GND>
 readdata[14] <= <GND>
-readdata[15] <= <GND>
-readdata[16] <= <GND>
+readdata[15] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[16] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[17] <= <GND>
 readdata[18] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[19] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[20] <= <GND>
+readdata[20] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[21] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[22] <= <GND>
 readdata[23] <= address.DB_MAX_OUTPUT_PORT_TYPE
@@ -10377,40 +10524,72 @@ servo_PWM_0_s0_writedata[28] <= altera_merlin_slave_translator:servo_pwm_0_s0_tr
 servo_PWM_0_s0_writedata[29] <= altera_merlin_slave_translator:servo_pwm_0_s0_translator.av_writedata
 servo_PWM_0_s0_writedata[30] <= altera_merlin_slave_translator:servo_pwm_0_s0_translator.av_writedata
 servo_PWM_0_s0_writedata[31] <= altera_merlin_slave_translator:servo_pwm_0_s0_translator.av_writedata
-switches_s1_address[0] <= altera_merlin_slave_translator:switches_s1_translator.av_address
-switches_s1_address[1] <= altera_merlin_slave_translator:switches_s1_translator.av_address
-switches_s1_readdata[0] => switches_s1_readdata[0].IN1
-switches_s1_readdata[1] => switches_s1_readdata[1].IN1
-switches_s1_readdata[2] => switches_s1_readdata[2].IN1
-switches_s1_readdata[3] => switches_s1_readdata[3].IN1
-switches_s1_readdata[4] => switches_s1_readdata[4].IN1
-switches_s1_readdata[5] => switches_s1_readdata[5].IN1
-switches_s1_readdata[6] => switches_s1_readdata[6].IN1
-switches_s1_readdata[7] => switches_s1_readdata[7].IN1
-switches_s1_readdata[8] => switches_s1_readdata[8].IN1
-switches_s1_readdata[9] => switches_s1_readdata[9].IN1
-switches_s1_readdata[10] => switches_s1_readdata[10].IN1
-switches_s1_readdata[11] => switches_s1_readdata[11].IN1
-switches_s1_readdata[12] => switches_s1_readdata[12].IN1
-switches_s1_readdata[13] => switches_s1_readdata[13].IN1
-switches_s1_readdata[14] => switches_s1_readdata[14].IN1
-switches_s1_readdata[15] => switches_s1_readdata[15].IN1
-switches_s1_readdata[16] => switches_s1_readdata[16].IN1
-switches_s1_readdata[17] => switches_s1_readdata[17].IN1
-switches_s1_readdata[18] => switches_s1_readdata[18].IN1
-switches_s1_readdata[19] => switches_s1_readdata[19].IN1
-switches_s1_readdata[20] => switches_s1_readdata[20].IN1
-switches_s1_readdata[21] => switches_s1_readdata[21].IN1
-switches_s1_readdata[22] => switches_s1_readdata[22].IN1
-switches_s1_readdata[23] => switches_s1_readdata[23].IN1
-switches_s1_readdata[24] => switches_s1_readdata[24].IN1
-switches_s1_readdata[25] => switches_s1_readdata[25].IN1
-switches_s1_readdata[26] => switches_s1_readdata[26].IN1
-switches_s1_readdata[27] => switches_s1_readdata[27].IN1
-switches_s1_readdata[28] => switches_s1_readdata[28].IN1
-switches_s1_readdata[29] => switches_s1_readdata[29].IN1
-switches_s1_readdata[30] => switches_s1_readdata[30].IN1
-switches_s1_readdata[31] => switches_s1_readdata[31].IN1
+servo_PWM_1_s0_write <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_write
+servo_PWM_1_s0_read <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_read
+servo_PWM_1_s0_readdata[0] => servo_PWM_1_s0_readdata[0].IN1
+servo_PWM_1_s0_readdata[1] => servo_PWM_1_s0_readdata[1].IN1
+servo_PWM_1_s0_readdata[2] => servo_PWM_1_s0_readdata[2].IN1
+servo_PWM_1_s0_readdata[3] => servo_PWM_1_s0_readdata[3].IN1
+servo_PWM_1_s0_readdata[4] => servo_PWM_1_s0_readdata[4].IN1
+servo_PWM_1_s0_readdata[5] => servo_PWM_1_s0_readdata[5].IN1
+servo_PWM_1_s0_readdata[6] => servo_PWM_1_s0_readdata[6].IN1
+servo_PWM_1_s0_readdata[7] => servo_PWM_1_s0_readdata[7].IN1
+servo_PWM_1_s0_readdata[8] => servo_PWM_1_s0_readdata[8].IN1
+servo_PWM_1_s0_readdata[9] => servo_PWM_1_s0_readdata[9].IN1
+servo_PWM_1_s0_readdata[10] => servo_PWM_1_s0_readdata[10].IN1
+servo_PWM_1_s0_readdata[11] => servo_PWM_1_s0_readdata[11].IN1
+servo_PWM_1_s0_readdata[12] => servo_PWM_1_s0_readdata[12].IN1
+servo_PWM_1_s0_readdata[13] => servo_PWM_1_s0_readdata[13].IN1
+servo_PWM_1_s0_readdata[14] => servo_PWM_1_s0_readdata[14].IN1
+servo_PWM_1_s0_readdata[15] => servo_PWM_1_s0_readdata[15].IN1
+servo_PWM_1_s0_readdata[16] => servo_PWM_1_s0_readdata[16].IN1
+servo_PWM_1_s0_readdata[17] => servo_PWM_1_s0_readdata[17].IN1
+servo_PWM_1_s0_readdata[18] => servo_PWM_1_s0_readdata[18].IN1
+servo_PWM_1_s0_readdata[19] => servo_PWM_1_s0_readdata[19].IN1
+servo_PWM_1_s0_readdata[20] => servo_PWM_1_s0_readdata[20].IN1
+servo_PWM_1_s0_readdata[21] => servo_PWM_1_s0_readdata[21].IN1
+servo_PWM_1_s0_readdata[22] => servo_PWM_1_s0_readdata[22].IN1
+servo_PWM_1_s0_readdata[23] => servo_PWM_1_s0_readdata[23].IN1
+servo_PWM_1_s0_readdata[24] => servo_PWM_1_s0_readdata[24].IN1
+servo_PWM_1_s0_readdata[25] => servo_PWM_1_s0_readdata[25].IN1
+servo_PWM_1_s0_readdata[26] => servo_PWM_1_s0_readdata[26].IN1
+servo_PWM_1_s0_readdata[27] => servo_PWM_1_s0_readdata[27].IN1
+servo_PWM_1_s0_readdata[28] => servo_PWM_1_s0_readdata[28].IN1
+servo_PWM_1_s0_readdata[29] => servo_PWM_1_s0_readdata[29].IN1
+servo_PWM_1_s0_readdata[30] => servo_PWM_1_s0_readdata[30].IN1
+servo_PWM_1_s0_readdata[31] => servo_PWM_1_s0_readdata[31].IN1
+servo_PWM_1_s0_writedata[0] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[1] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[2] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[3] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[4] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[5] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[6] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[7] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[8] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[9] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[10] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[11] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[12] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[13] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[14] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[15] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[16] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[17] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[18] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[19] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[20] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[21] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[22] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[23] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[24] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[25] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[26] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[27] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[28] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[29] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[30] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
+servo_PWM_1_s0_writedata[31] <= altera_merlin_slave_translator:servo_pwm_1_s0_translator.av_writedata
 sysid_qsys_0_control_slave_address[0] <= altera_merlin_slave_translator:sysid_qsys_0_control_slave_translator.av_address
 sysid_qsys_0_control_slave_readdata[0] => sysid_qsys_0_control_slave_readdata[0].IN1
 sysid_qsys_0_control_slave_readdata[1] => sysid_qsys_0_control_slave_readdata[1].IN1
@@ -11032,7 +11211,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:switches_s1_translator
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:servo_pwm_1_s0_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11118,7 +11297,7 @@ reset => wait_latency_counter[1].ACLR
 uav_address[0] => ~NO_FANOUT~
 uav_address[1] => ~NO_FANOUT~
 uav_address[2] => av_address[0].DATAIN
-uav_address[3] => av_address[1].DATAIN
+uav_address[3] => ~NO_FANOUT~
 uav_address[4] => ~NO_FANOUT~
 uav_address[5] => ~NO_FANOUT~
 uav_address[6] => ~NO_FANOUT~
@@ -11169,6 +11348,9 @@ uav_writedata[29] => av_writedata[29].DATAIN
 uav_writedata[30] => av_writedata[30].DATAIN
 uav_writedata[31] => av_writedata[31].DATAIN
 uav_write => av_writebyteenable.IN0
+uav_write => av_writebyteenable.IN0
+uav_write => av_writebyteenable.IN0
+uav_write => av_writebyteenable.IN0
 uav_write => av_write.IN1
 uav_write => av_waitrequest_generated.OUTPUTSELECT
 uav_write => av_begintransfer.IN0
@@ -11186,9 +11368,12 @@ uav_burstcount[2] => av_burstcount[0].DATAIN
 uav_burstcount[2] => Equal2.IN0
 uav_byteenable[0] => av_writebyteenable.IN1
 uav_byteenable[0] => av_byteenable[0].DATAIN
-uav_byteenable[1] => ~NO_FANOUT~
-uav_byteenable[2] => ~NO_FANOUT~
-uav_byteenable[3] => ~NO_FANOUT~
+uav_byteenable[1] => av_writebyteenable.IN1
+uav_byteenable[1] => av_byteenable[1].DATAIN
+uav_byteenable[2] => av_writebyteenable.IN1
+uav_byteenable[2] => av_byteenable[2].DATAIN
+uav_byteenable[3] => av_writebyteenable.IN1
+uav_byteenable[3] => av_byteenable[3].DATAIN
 uav_lock => av_lock.DATAIN
 uav_debugaccess => av_debugaccess.DATAIN
 uav_clken => ~NO_FANOUT~
@@ -11230,7 +11415,6 @@ uav_response[0] <= <GND>
 uav_response[1] <= <GND>
 uav_writeresponsevalid <= av_writeresponsevalid.DB_MAX_OUTPUT_PORT_TYPE
 av_address[0] <= uav_address[2].DB_MAX_OUTPUT_PORT_TYPE
-av_address[1] <= uav_address[3].DB_MAX_OUTPUT_PORT_TYPE
 av_writedata[0] <= uav_writedata[0].DB_MAX_OUTPUT_PORT_TYPE
 av_writedata[1] <= uav_writedata[1].DB_MAX_OUTPUT_PORT_TYPE
 av_writedata[2] <= uav_writedata[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -11267,7 +11451,13 @@ av_write <= av_write.DB_MAX_OUTPUT_PORT_TYPE
 av_read <= av_read.DB_MAX_OUTPUT_PORT_TYPE
 av_burstcount[0] <= uav_burstcount[2].DB_MAX_OUTPUT_PORT_TYPE
 av_byteenable[0] <= uav_byteenable[0].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[1] <= uav_byteenable[1].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[2] <= uav_byteenable[2].DB_MAX_OUTPUT_PORT_TYPE
+av_byteenable[3] <= uav_byteenable[3].DB_MAX_OUTPUT_PORT_TYPE
 av_writebyteenable[0] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[1] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[2] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
+av_writebyteenable[3] <= av_writebyteenable.DB_MAX_OUTPUT_PORT_TYPE
 av_begintransfer <= av_begintransfer.DB_MAX_OUTPUT_PORT_TYPE
 av_chipselect <= av_chipselect.DB_MAX_OUTPUT_PORT_TYPE
 av_beginbursttransfer <= av_beginbursttransfer.DB_MAX_OUTPUT_PORT_TYPE
@@ -16877,7 +17067,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switches_s1_agent
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:servo_pwm_1_s0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -17585,7 +17775,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switches_s1_agent|altera_merlin_burst_uncompressor:uncompressor
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:servo_pwm_1_s0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -17883,7 +18073,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:switches_s1_agent_rsp_fifo
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:servo_pwm_1_s0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -18768,7 +18958,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:switches_s1_agent_rdata_fifo
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:servo_pwm_1_s0_agent_rdata_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -19238,9 +19428,11 @@ sink_data[35] => src_data[35].DATAIN
 sink_data[36] => src_data[36].DATAIN
 sink_data[37] => src_data[37].DATAIN
 sink_data[38] => src_data[38].DATAIN
+sink_data[38] => Equal1.IN8
 sink_data[38] => Equal2.IN8
 sink_data[39] => src_data[39].DATAIN
 sink_data[39] => Equal0.IN7
+sink_data[39] => Equal1.IN7
 sink_data[39] => Equal2.IN7
 sink_data[40] => src_data[40].DATAIN
 sink_data[40] => Equal0.IN6
@@ -19264,11 +19456,11 @@ sink_data[44] => Equal1.IN1
 sink_data[44] => Equal2.IN2
 sink_data[45] => src_data[45].DATAIN
 sink_data[45] => Equal0.IN2
-sink_data[45] => Equal1.IN0
+sink_data[45] => Equal1.IN2
 sink_data[45] => Equal2.IN1
 sink_data[46] => src_data[46].DATAIN
 sink_data[46] => Equal0.IN1
-sink_data[46] => Equal1.IN2
+sink_data[46] => Equal1.IN0
 sink_data[46] => Equal2.IN0
 sink_data[47] => src_data[47].DATAIN
 sink_data[48] => src_data[48].DATAIN
@@ -19283,7 +19475,6 @@ sink_data[56] => src_data[56].DATAIN
 sink_data[57] => src_data[57].DATAIN
 sink_data[58] => src_data[58].DATAIN
 sink_data[59] => src_data[59].DATAIN
-sink_data[60] => always1.IN1
 sink_data[60] => always1.IN1
 sink_data[60] => src_data[60].DATAIN
 sink_data[61] => src_data[61].DATAIN
@@ -19466,17 +19657,17 @@ src_ready => sink_ready.DATAIN
 
 
 |tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|soc_system_mm_interconnect_0_router:router|soc_system_mm_interconnect_0_router_default_decode:the_default_decode
-default_destination_id[0] <= <VCC>
-default_destination_id[1] <= <GND>
+default_destination_id[0] <= <GND>
+default_destination_id[1] <= <VCC>
 default_wr_channel[0] <= <GND>
 default_wr_channel[1] <= <GND>
 default_wr_channel[2] <= <GND>
 default_rd_channel[0] <= <GND>
 default_rd_channel[1] <= <GND>
 default_rd_channel[2] <= <GND>
-default_src_channel[0] <= <GND>
+default_src_channel[0] <= <VCC>
 default_src_channel[1] <= <GND>
-default_src_channel[2] <= <VCC>
+default_src_channel[2] <= <GND>
 
 
 |tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|soc_system_mm_interconnect_0_router:router_001
@@ -19522,9 +19713,11 @@ sink_data[35] => src_data[35].DATAIN
 sink_data[36] => src_data[36].DATAIN
 sink_data[37] => src_data[37].DATAIN
 sink_data[38] => src_data[38].DATAIN
+sink_data[38] => Equal1.IN8
 sink_data[38] => Equal2.IN8
 sink_data[39] => src_data[39].DATAIN
 sink_data[39] => Equal0.IN7
+sink_data[39] => Equal1.IN7
 sink_data[39] => Equal2.IN7
 sink_data[40] => src_data[40].DATAIN
 sink_data[40] => Equal0.IN6
@@ -19548,11 +19741,11 @@ sink_data[44] => Equal1.IN1
 sink_data[44] => Equal2.IN2
 sink_data[45] => src_data[45].DATAIN
 sink_data[45] => Equal0.IN2
-sink_data[45] => Equal1.IN0
+sink_data[45] => Equal1.IN2
 sink_data[45] => Equal2.IN1
 sink_data[46] => src_data[46].DATAIN
 sink_data[46] => Equal0.IN1
-sink_data[46] => Equal1.IN2
+sink_data[46] => Equal1.IN0
 sink_data[46] => Equal2.IN0
 sink_data[47] => src_data[47].DATAIN
 sink_data[48] => src_data[48].DATAIN
@@ -19567,7 +19760,6 @@ sink_data[56] => src_data[56].DATAIN
 sink_data[57] => src_data[57].DATAIN
 sink_data[58] => src_data[58].DATAIN
 sink_data[59] => src_data[59].DATAIN
-sink_data[60] => always1.IN1
 sink_data[60] => always1.IN1
 sink_data[60] => src_data[60].DATAIN
 sink_data[61] => src_data[61].DATAIN
@@ -19750,17 +19942,17 @@ src_ready => sink_ready.DATAIN
 
 
 |tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|soc_system_mm_interconnect_0_router:router_001|soc_system_mm_interconnect_0_router_default_decode:the_default_decode
-default_destination_id[0] <= <VCC>
-default_destination_id[1] <= <GND>
+default_destination_id[0] <= <GND>
+default_destination_id[1] <= <VCC>
 default_wr_channel[0] <= <GND>
 default_wr_channel[1] <= <GND>
 default_wr_channel[2] <= <GND>
 default_rd_channel[0] <= <GND>
 default_rd_channel[1] <= <GND>
 default_rd_channel[2] <= <GND>
-default_src_channel[0] <= <GND>
+default_src_channel[0] <= <VCC>
 default_src_channel[1] <= <GND>
-default_src_channel[2] <= <VCC>
+default_src_channel[2] <= <GND>
 
 
 |tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|soc_system_mm_interconnect_0_router_002:router_002
@@ -23940,7 +24132,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => sink0_valid.IN1
@@ -24187,7 +24379,7 @@ source0_endofpacket <= altera_merlin_burst_adapter_13_1:altera_merlin_burst_adap
 source0_ready => source0_ready.IN1
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => in_valid.IN1
@@ -24470,7 +24662,7 @@ source0_ready => nxt_out_eop.OUTPUTSELECT
 source0_ready => nxt_uncomp_subburst_byte_cnt.IN1
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_address_alignment:align_address_to_size
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_address_alignment:align_address_to_size
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 in_data[0] => LessThan0.IN6
@@ -24529,7 +24721,7 @@ out_data[22] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 out_ready => ~NO_FANOUT~
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_burstwrap_increment:the_burstwrap_increment
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_burstwrap_increment:the_burstwrap_increment
 mask[0] => inc.IN0
 mask[0] => inc[0].DATAIN
 mask[1] => inc.IN0
@@ -24552,7 +24744,7 @@ inc[5] <= inc.DB_MAX_OUTPUT_PORT_TYPE
 inc[6] <= inc.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 a[0] => a_reg[0].IN3
@@ -24594,7 +24786,7 @@ result[5] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
 result[6] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -24621,7 +24813,7 @@ diff[6] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[7] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub|altera_merlin_burst_adapter_adder:subtract
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -24679,7 +24871,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -24706,7 +24898,7 @@ diff[6] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[7] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub|altera_merlin_burst_adapter_adder:subtract
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -24764,7 +24956,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -24791,7 +24983,7 @@ diff[6] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[7] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub|altera_merlin_burst_adapter_adder:subtract
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -24849,7 +25041,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -24876,7 +25068,7 @@ diff[6] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[7] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub|altera_merlin_burst_adapter_adder:subtract
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -24934,7 +25126,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -24961,7 +25153,7 @@ diff[6] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[7] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub|altera_merlin_burst_adapter_adder:subtract
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -25019,7 +25211,7 @@ sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -25046,7 +25238,7 @@ diff[6] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[7] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switches_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub|altera_merlin_burst_adapter_adder:subtract
+|tutorial2|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:servo_pwm_1_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0

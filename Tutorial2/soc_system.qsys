@@ -32,6 +32,11 @@
          value = "3";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element servo_PWM_0.s0
    {
@@ -63,7 +68,7 @@
       }
       datum baseAddress
       {
-         value = "1792";
+         value = "1280";
          type = "String";
       }
    }
@@ -114,12 +119,12 @@
  <interface name="memory" internal="hps_0.memory" type="conduit" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="servo_pwm_0_conduit_end_export"
+   name="servo_pwm_0"
    internal="servo_PWM_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface
-   name="servo_pwm_1_conduit_end_export"
+   name="servo_pwm_1"
    internal="servo_PWM_1.conduit_end"
    type="conduit"
    dir="end" />
@@ -692,7 +697,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="servo_PWM_1.s0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0700" />
+  <parameter name="baseAddress" value="0x0500" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="17.0" start="clk_0.clk" end="sysid_qsys_0.clk" />

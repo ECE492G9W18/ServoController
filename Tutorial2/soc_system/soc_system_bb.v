@@ -67,8 +67,8 @@ module soc_system (
 	memory_mem_dm,
 	memory_oct_rzqin,
 	reset_reset_n,
-	servo_pwm_0_conduit_end_export_export,
-	servo_pwm_1_conduit_end_export_export);	
+	servo_pwm_0_export,
+	servo_pwm_1_export);	
 
 	input		clk_clk;
 	output		hps_io_hps_io_emac1_inst_TX_CLK;
@@ -137,6 +137,6 @@ module soc_system (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
-	output		servo_pwm_0_conduit_end_export_export;
-	output		servo_pwm_1_conduit_end_export_export;
+	output		servo_pwm_0_export;
+	output		servo_pwm_1_export;
 endmodule

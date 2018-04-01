@@ -1,0 +1,15 @@
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--
+--entity servo_controller_tb is 
+--end serco_controller_tb;
+--
+--architecture test of servo_controller_tb is
+--
+--	constant WAIT_TIME : time := 500 ms;
+--	
+--	
+--	begin
+--		servo_test: entity tutorial2
+--		port map(
