@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.arm.debugger.launcher2">
 <mapAttribute key="AverageDurationTracker">
-<mapEntry key="*Fetching Data" value="752412"/>
-<mapEntry key="*Fetching Data Model" value="112611"/>
-<mapEntry key="*list global low level symbols" value="826088"/>
+<mapEntry key="*Fetching Data" value="686096"/>
+<mapEntry key="*Fetching Data Model" value="116449"/>
+<mapEntry key="*list global low level symbols" value="527689"/>
 <mapEntry key="*loading values from target" value="2324612"/>
 <mapEntry key="*updating variables" value="842691"/>
-<mapEntry key="AddEventObserver" value="311984"/>
+<mapEntry key="AddEventObserver" value="195998"/>
 <mapEntry key="Evaluate" value="1074541"/>
 <mapEntry key="Retrieving globals list" value="3666473"/>
-<mapEntry key="areCachesAvailable" value="491483"/>
-<mapEntry key="break" value="13430149"/>
-<mapEntry key="continue" value="101120427"/>
+<mapEntry key="areCachesAvailable" value="441703"/>
+<mapEntry key="break" value="17117487"/>
+<mapEntry key="continue" value="111527576"/>
 <mapEntry key="core" value="2941536"/>
 <mapEntry key="disassemble" value="55336140"/>
 <mapEntry key="evaluate address" value="1780917"/>
-<mapEntry key="get capabilities" value="374364"/>
-<mapEntry key="get execution addresss" value="544864"/>
-<mapEntry key="get source lines" value="552189"/>
-<mapEntry key="getValidEncodings" value="369921"/>
-<mapEntry key="initialize command help" value="24619602"/>
-<mapEntry key="list breakpoints" value="299266"/>
-<mapEntry key="list instruction sets" value="86224"/>
-<mapEntry key="list signals" value="42922994"/>
-<mapEntry key="list watchpoints" value="242738"/>
-<mapEntry key="loadfile" value="545360652"/>
-<mapEntry key="reload-symbol-file" value="12203177"/>
+<mapEntry key="get capabilities" value="270777"/>
+<mapEntry key="get execution addresss" value="492625"/>
+<mapEntry key="get source lines" value="492800"/>
+<mapEntry key="getValidEncodings" value="402538"/>
+<mapEntry key="initialize command help" value="20590080"/>
+<mapEntry key="list breakpoints" value="267983"/>
+<mapEntry key="list instruction sets" value="73183"/>
+<mapEntry key="list signals" value="47642972"/>
+<mapEntry key="list watchpoints" value="212924"/>
+<mapEntry key="loadfile" value="477766558"/>
+<mapEntry key="reload-symbol-file" value="11846320"/>
 <mapEntry key="remove" value="8591232"/>
-<mapEntry key="set CWD" value="564314"/>
-<mapEntry key="set breakpoint properties" value="19902932"/>
-<mapEntry key="set debug-from" value="446576"/>
-<mapEntry key="source altera_target_check.py" value="225079299"/>
-<mapEntry key="source preloader.ds" value="3035589870"/>
-<mapEntry key="start" value="50763077"/>
+<mapEntry key="set CWD" value="597804"/>
+<mapEntry key="set breakpoint properties" value="22876835"/>
+<mapEntry key="set debug-from" value="371369"/>
+<mapEntry key="source altera_target_check.py" value="217642420"/>
+<mapEntry key="source preloader.ds" value="3496389965"/>
+<mapEntry key="start" value="46536760"/>
 <mapEntry key="toggleBreakpoint" value="16199667"/>
-<mapEntry key="waitForTargetToStop" value="429366628"/>
+<mapEntry key="waitForTargetToStop" value="449747224"/>
 </mapAttribute>
 <intAttribute key="DEBUG_TAB..RESOURCES.COUNT" value="0"/>
 <intAttribute key="FILES.CONNECT_TO_GDB_SERVER.RESOURCES.COUNT" value="0"/>
@@ -116,7 +116,7 @@
 <booleanAttribute key="VFS_ENABLED" value="true"/>
 <stringAttribute key="VFS_LOCAL_DIR" value="${workspace_loc}"/>
 <stringAttribute key="VFS_REMOTE_MOUNT" value="/writeable"/>
-<stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints&gt;&#10;&#9;&lt;breakpoint ignorecount=&quot;0&quot; threadenabled=&quot;no&quot; list_all_threads=&quot;no&quot; core_list=&quot;{}&quot; continue=&quot;no&quot; verboseBreakpoints=&quot;yes&quot; kind=&quot;SOURCEPOSITION&quot;&gt;&#10;&#9;&#9;&lt;master_location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; debugFile=&quot;C:/Users/jessicaa/Documents/Capstone/backup/tutorial2_restored/Software2/ServoController/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\APP\app.c&quot; line=&quot;125&quot;/&gt;&#10;&#9;&#9;&lt;location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; address=&quot;S:0x01006D0C&quot; debugFile=&quot;C:/Users/jessicaa/Documents/Capstone/backup/tutorial2_restored/Software2/ServoController/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\APP\app.c&quot; line=&quot;125&quot;/&gt;&#10;&#9;&lt;/breakpoint&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
+<stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints&gt;&#10;&#9;&lt;breakpoint ignorecount=&quot;0&quot; threadenabled=&quot;no&quot; list_all_threads=&quot;no&quot; core_list=&quot;{}&quot; continue=&quot;no&quot; verboseBreakpoints=&quot;yes&quot; kind=&quot;SOURCEPOSITION&quot;&gt;&#10;&#9;&#9;&lt;master_location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; debugFile=&quot;C:/Users/jessicaa/Documents/Capstone/backup/tutorial2_restored/Software2/ServoController/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\APP\app.c&quot; line=&quot;127&quot;/&gt;&#10;&#9;&#9;&lt;location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; address=&quot;S:0x01006E18&quot; debugFile=&quot;C:/Users/jessicaa/Documents/Capstone/backup/tutorial2_restored/Software2/ServoController/APP/app.c&quot; hostFile=&quot;C:\Users\jessicaa\Documents\Capstone\backup\tutorial2_restored\Software2\ServoController\APP\app.c&quot; line=&quot;128&quot;/&gt;&#10;&#9;&lt;/breakpoint&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
 <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.DisassemblyView.addresses">
 <listEntry value="&lt;Next Instruction&gt;"/>
 </listAttribute>

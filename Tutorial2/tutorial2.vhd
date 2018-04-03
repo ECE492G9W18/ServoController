@@ -201,7 +201,8 @@ architecture comps of tutorial2 is
             hps_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
             hps_io_hps_io_gpio_inst_GPIO61      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
             servo_pwm_0_export						: out std_logic;												 -- servo_pwm_0_conduit_end_export.export
-				servo_pwm_1_export 						: out std_logic												 -- servo_pwm_1_conduit_end_export.export
+				servo_pwm_1_export 						: out std_logic;												 -- servo_pwm_1_conduit_end_export.export
+				switches_external_connection_export : in std_logic_vector (9 downto 0)
         );
     end component soc_system;
 
@@ -288,7 +289,8 @@ begin
             hps_io_hps_io_gpio_inst_GPIO54      => HPS_KEY_N,
             hps_io_hps_io_gpio_inst_GPIO61      => HPS_GSENSOR_INT,
 				servo_pwm_0_export						=> GPIO_0(11),
-				servo_pwm_1_export 						=> GPIO_0(12) 
+				servo_pwm_1_export 						=> GPIO_0(12),
+				switches_external_connection_export => SW
         );
 
 

@@ -61,6 +61,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "io.h"
 
 
@@ -73,13 +74,15 @@
 
 #define SERVO_PWM_0_ADDR 	0x00000600
 #define SERVO_PWM_1_ADDR	0x00000500
+#define SWITCH_ADDR			0x00000300
 
 #define SERVO_PWM_0_BASE FPGA_TO_HPS_LW_ADDR(SERVO_PWM_0_ADDR)
 #define SERVO_PWM_1_BASE FPGA_TO_HPS_LW_ADDR(SERVO_PWM_1_ADDR)
+#define SWITCH_BASE 	 FPGA_TO_HPS_LW_ADDR(SWITCH_ADDR)
 
 #define APP_TASK1_PRIO 6
 #define APP_TASKS_PRIO 7
-#define SW_CHK_PRIO 5
+#define SWITCH_TASK_PRIO 5
 
 #define TASK_STACK_SIZE 4096
 #define QSIZE 50;
@@ -92,7 +95,7 @@
 
 CPU_STK AppTaskStartStk[TASK_STACK_SIZE];
 CPU_STK Task1Stk[TASK_STACK_SIZE];
-CPU_STK CheckSwitchTaskStk[TASK_STACK_SIZE];
+CPU_STK SwitchTaskStk[TASK_STACK_SIZE];
 OS_EVENT OSQ;
 void *OSQTable[50];
 
@@ -158,19 +161,33 @@ int main ()
             ; /* Handle error. */
         }
 
-    os_err = OSTaskCreateExt((void (*)(void *)) ServoTask,
-                                (void          * ) 0,
-                                (OS_STK        * )&Task1Stk[TASK_STACK_SIZE - 1],
-                                (INT8U           ) APP_TASK1_PRIO,
-                                (INT16U          ) APP_TASK1_PRIO,
-                                (OS_STK        * )&Task1Stk[0],
-                                (INT32U          ) TASK_STACK_SIZE,
-                                (void          * )0,
-                                (INT16U          )(OS_TASK_OPT_STK_CLR | OS_TASK_OPT_STK_CHK));
+//    os_err = OSTaskCreateExt((void (*)(void *)) ServoTask,
+//                                (void          * ) 0,
+//                                (OS_STK        * )&Task1Stk[TASK_STACK_SIZE - 1],
+//                                (INT8U           ) APP_TASK1_PRIO,
+//                                (INT16U          ) APP_TASK1_PRIO,
+//                                (OS_STK        * )&Task1Stk[0],
+//                                (INT32U          ) TASK_STACK_SIZE,
+//                                (void          * )0,
+//                                (INT16U          )(OS_TASK_OPT_STK_CLR | OS_TASK_OPT_STK_CHK));
+//
+//    if (os_err != OS_ERR_NONE) {
+//            ; /* Handle error. */
+//        }
 
-    if (os_err != OS_ERR_NONE) {
-            ; /* Handle error. */
-        }
+    os_err = OSTaskCreateExt((void (*)(void *)) SwitchTask,
+                                    (void          * ) 0,
+                                    (OS_STK        * )&SwitchTaskStk[TASK_STACK_SIZE - 1],
+                                    (INT8U           ) SWITCH_TASK_PRIO,
+                                    (INT16U          ) SWITCH_TASK_PRIO,
+                                    (OS_STK        * )&SwitchTaskStk[0],
+                                    (INT32U          ) TASK_STACK_SIZE,
+                                    (void          * )0,
+                                    (INT16U          )(OS_TASK_OPT_STK_CLR | OS_TASK_OPT_STK_CHK));
+
+        if (os_err != OS_ERR_NONE) {
+                ; /* Handle error. */
+            }
 
     CPU_IntEn();
 
@@ -247,4 +264,87 @@ static void ServoTask(void *pdata)
 		OSTimeDlyHMSM(0, 0, 3, 0);
 
 	}
+}
+
+static void SwitchTask (void *p_arg) {
+
+	BSP_OS_TmrTickInit(OS_TICKS_PER_SEC);                       /* Configure and enable OS tick interrupt.              */
+
+	uint32_t result;
+	uint32_t delta;
+	uint32_t old_result = -1; // impossible value
+
+	uint32_t pos_A = 28000;
+	uint32_t pos_B = 80000;
+	uint32_t pos_C = 50000;
+
+
+	for (;;) {
+
+        result = alt_read_word(SWITCH_BASE);
+        if (old_result == -1|| result != old_result) {
+        	delta = abs(old_result - result);
+
+        	switch(delta) {
+
+				case 512:
+					alt_write_word(SERVO_PWM_0_BASE, pos_A);
+					alt_write_word(SERVO_PWM_1_BASE, pos_C);
+					break;
+
+				case 256:
+					alt_write_word(SERVO_PWM_0_BASE, pos_B);
+					alt_write_word(SERVO_PWM_1_BASE, pos_C);
+					break;
+
+				case 128:
+					alt_write_word(SERVO_PWM_0_BASE, pos_C);
+					alt_write_word(SERVO_PWM_1_BASE, pos_C);
+					break;
+
+				case 64:
+					alt_write_word(SERVO_PWM_0_BASE, pos_A);
+					alt_write_word(SERVO_PWM_1_BASE, pos_B);
+					break;
+
+				case 32:
+					alt_write_word(SERVO_PWM_0_BASE, pos_B);
+					alt_write_word(SERVO_PWM_1_BASE, pos_B);
+					break;
+
+				case 16:
+					alt_write_word(SERVO_PWM_0_BASE, pos_C);
+					alt_write_word(SERVO_PWM_1_BASE, pos_B);
+					break;
+
+				case 8:
+					alt_write_word(SERVO_PWM_0_BASE, pos_A);
+					alt_write_word(SERVO_PWM_1_BASE, pos_A);
+					break;
+
+				case 4:
+					alt_write_word(SERVO_PWM_0_BASE, pos_B);
+					alt_write_word(SERVO_PWM_1_BASE, pos_A);
+					break;
+
+				case 2:
+					alt_write_word(SERVO_PWM_0_BASE, pos_C);
+					alt_write_word(SERVO_PWM_1_BASE, pos_A);
+					break;
+        	}
+
+        	printf("delta: %" PRIu32 "\n", delta);
+			char full_line[40];
+			sprintf(full_line, "Switch Reader\nSwitches : 0x%x\n", result);
+
+	        OSQPost(&OSQ, (void *) full_line);
+			old_result = result;
+
+
+        }
+
+        OSTimeDlyHMSM(0, 0, 0, 50);
+
+	}
+
 }

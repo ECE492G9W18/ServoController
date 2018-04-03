@@ -10,6 +10,8 @@ Progress: Adding servo_PWM_0 [servo_PWM 1.0]
 Progress: Parameterizing module servo_PWM_0
 Progress: Adding servo_PWM_1 [servo_PWM 1.0]
 Progress: Parameterizing module servo_PWM_1
+Progress: Adding switches [altera_avalon_pio 17.0]
+Progress: Parameterizing module switches
 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 17.0]
 Progress: Parameterizing module sysid_qsys_0
 Progress: Building connections
@@ -18,6 +20,7 @@ Progress: Validating
 Progress: Done reading input file
 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: soc_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: soc_system.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
 Info: soc_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
 Info: qsys-generate succeeded.
@@ -35,6 +38,8 @@ Progress: Adding servo_PWM_0 [servo_PWM 1.0]
 Progress: Parameterizing module servo_PWM_0
 Progress: Adding servo_PWM_1 [servo_PWM 1.0]
 Progress: Parameterizing module servo_PWM_1
+Progress: Adding switches [altera_avalon_pio 17.0]
+Progress: Parameterizing module switches
 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 17.0]
 Progress: Parameterizing module sysid_qsys_0
 Progress: Building connections
@@ -43,6 +48,7 @@ Progress: Validating
 Progress: Done reading input file
 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: soc_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: soc_system.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
 Info: soc_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
 Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
@@ -51,10 +57,15 @@ Info: hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
 Info: servo_PWM_0: "soc_system" instantiated servo_PWM "servo_PWM_0"
+Info: switches: Starting RTL generation for module 'soc_system_switches'
+Info: switches:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_switches --dir=C:/Users/jessicaa/AppData/Local/Temp/alt7624_1373536246821621767.dir/0003_switches_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/jessicaa/AppData/Local/Temp/alt7624_1373536246821621767.dir/0003_switches_gen//soc_system_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches: Done RTL generation for module 'soc_system_switches'
+Info: switches: "soc_system" instantiated altera_avalon_pio "switches"
 Info: sysid_qsys_0: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
@@ -78,6 +89,6 @@ Info: Reusing file C:/Users/jessicaa/Documents/Capstone/backup/tutorial2_restore
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: soc_system: Done "soc_system" with 23 modules, 82 files
+Info: soc_system: Done "soc_system" with 24 modules, 83 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
